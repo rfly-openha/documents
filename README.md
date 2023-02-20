@@ -6,7 +6,9 @@
 - 使用教程
     1. 软件下载及安装
     1. 使用手册
-    1. [API库](./2_tutorial/)
+    1. API库
+        1. [acai](./2_tutorial/acai.md)
+        1. [control_allocation](./2_tutorial/control_allocation.md)
     1. 实践案例
 - 开发者文档
     1. 代码贡献指南
