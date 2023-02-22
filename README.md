@@ -8,7 +8,22 @@
     1. 使用手册
     1. API库
         1. [acai](./2_tutorial/acai.md)
+        1. [analytical_hierarchy_process](./2_tutorial/analytical_hierarchy_process.md)    
+        1. [average_rectified_value](./2_tutorial/average_rectified_value.md)
+        1. [central_moment](./2_tutorial/central_moment.md)
         1. [control_allocation](./2_tutorial/control_allocation.md)
+        1. [doc_disturbance_rejection_kang](./2_tutorial/doc_disturbance_rejection_kang.md)
+        1. [doc_gramian](./2_tutorial/doc_gramian.md)
+        1. [get_interval](./2_tutorial/get_interval.md)
+        1. [interpolation](./2_tutorial/interpolation.md)
+        1. [kurtosis](./2_tutorial/kurtosis.md)
+        1. [local_outlier_factor](./2_tutorial/local_outlier_factor.md)
+        1. [profust_reliability](./2_tutorial/profust_reliability.md)
+        1. [raw_moment](./2_tutorial/raw_moment.md)
+        1. [split_dataset](./2_tutorial/split_dataset.md)
+        1. [sum_by_weight](./2_tutorial/sum_by_weight.md)
+        1. [trapezoidal_membership_func](./2_tutorial/trapezoidal_membership_func.md)      
+        1. [variance](./2_tutorial/variance.md)
     1. 实践案例
 - 开发者文档
     1. 代码贡献指南
