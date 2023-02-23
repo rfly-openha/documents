@@ -3,11 +3,9 @@
 为确保本仓库中代码风格的统一与一致，且具备一定的可读性，在此，我们对仓库中的代码提出一些基本的约束与规范。
 本文主要从代码风格、命名、注释等几个层面给出一定的参考意见，各位仓库贡献者应事先阅读本文，并尽量遵守各项基本要求。
 
-[toc]
-
 ## 代码风格
 
-本仓库所托管代码是使用Python实现的开源健康评估框架（Open Source Health Assessment, OpenHA），基本遵循[PEP8](https://www.python.org/dev/peps/pep-0008/)风格规范，用户可点击链接查看其具体基本格式要求。
+本仓库所托管代码是使用Python编程语言实现的开源健康评估框架（Open Source Health Assessment, OpenHA），基本遵循[PEP8](https://www.python.org/dev/peps/pep-0008/)风格规范，用户可点击链接查看其具体基本格式要求。
 
 在这里，我们推荐自动格式化工具`black`，该工具可以自动将代码严格遵循PEP8规范进行格式化。
 用户可在其[官网](https://black.readthedocs.io/en/stable/index.html)了解和查看更多内容。
@@ -38,6 +36,7 @@
 - `mixedCase` 小驼峰命名法，首字母小写
 
 总的来说，本仓库中代码主要使用**下划线命名**的整体规范。
+
 - 对于变量与函数名，一般采用**小写单词与下划线**组合，如`load_data()`、`simulation_results`；
 - 对于类名，一般采用**大驼峰命名法**，如如`AbstractClass`，其中单词数量建议不超过两个；
 - 常量采用**全大写字母加下划线**的命名方式，如`MAX_SIZE`；
@@ -68,23 +67,26 @@ if i & (i-1) == 0:  # True if i is 0 or a power of 2.
 ```python
 def plus(a: int, b: int = 0) -> int:
     '''
-    函数功能的简要介绍
+    Summary description of this function.
 
-    这里对该函数`plus()`功能、目的等信息进行详细介绍
-    函数声明中建议包含对输入参数及返回值类型的声明
+    Detailed description of this function.
+    Its functionality or purpose should be explained comprehensively and explicitly.
+    The content should also be consistent with its corresponding API document.
 
     Args:
-        a: int, 参数`a`的介绍
-        b: int, optional, 参数`b`的介绍
+        a: int. Descriptions of the parameter `a`.
+        b: int, optional. Description of the parameter `b`.
 
     Returns:
-        返回值介绍
+        Describe the type and semantics of the return value. If the function only returns None, this section is not required.
+        It may also be omitted if the docstring starts with "Returns" or "Yields" and the opening sentence is sufficient to describe the return value.
+
 
     Raises:
-        有可能抛出的异常
+        List of expections may be raised.
     '''
 
-    # 函数体
+    # main part the function
     return a + b
 
 ```
@@ -95,7 +97,7 @@ def plus(a: int, b: int = 0) -> int:
 
 ```python
 # -*- coding: utf-8 -*-
-# Copyright (C) rflylab from School of Automation Science and Electrical Engineering, Beihang University. 
+# Copyright (C) rflylab from School of Automation Science and Electrical Engineering, Beihang University.
 # All Rights Reserved.
 
 # 后接正文
