@@ -17,6 +17,7 @@
         1. [get_interval](./2_tutorial/get_interval.html)
         1. [interpolation](./2_tutorial/interpolation.html)
         1. [kurtosis](./2_tutorial/kurtosis.html)
+        1. [load_ANN](./2_tutorial/load_ANN.html)
         1. [local_outlier_factor](./2_tutorial/local_outlier_factor.html)
         1. [profust_reliability](./2_tutorial/profust_reliability.html)
         1. [raw_moment](./2_tutorial/raw_moment.html)

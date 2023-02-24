@@ -1,6 +1,6 @@
 # `acai`
 
-Compute the degree of controllability (DoC) based on the Availability Control Authority Index, namely ACAI, which is propused by Guang-Xu Du in his paper [1].
+Computes the degree of controllability (DOC) based on the Availability Control Authority Index, namely ACAI, which is proposed by Guang-Xu Du in his paper [1].
 
 ## Syntax
 
@@ -14,9 +14,21 @@ acai(bf, fmax, fmin, G)
 doc = acai(bf, fmax, fmin, G)
 ```
 
-Returns the DoC based on ACAI according to computation method that is introduced in the paper.
+Computes the DOC based on ACAI according to the theory and method that is introduced in the paper.
 
-The mathematical essence of ACAI is the minimum of the nearest distance between the boundary of a closed space with boundaries `fmax` and `fmin` and the boundary of the new space obtained by mapping the matrix `bf` to its interior point `G`.
+In mathematics, an enclosed space $U$ is defined as
+
+$$
+U = \{\mathbf{f}|\mathbf{f}=[\begin{matrix}f_1 &\cdots&f_i&\cdots & f_n\end{matrix}]^\text{T},f_i\in\left[f_{\min},f_{\max}\right]\}
+$$
+
+A new space $\Omega$ is also enclosed, which is defined as
+
+$$
+\Omega = \{\mathbf{u}|\mathbf{u}=\mathbf{B}_f\mathbf{f},\mathbf{f}\in U\}
+$$
+
+In mathematics, the ACAI is essentially the minimum of the nearest distances between the boundary of $\Omega$ with the given point $\mathbf{G}$.
 
 ## Examples
 
@@ -35,36 +47,36 @@ The mathematical essence of ACAI is the minimum of the nearest distance between 
 
 ## Input Arguments
 
-`bf` —— An m-by-n matrix, which is refer to the linear reflection from the original space to the new one.
+`bf` —— An n-by-m matrix, which refers to the linear map from $U$ to $\Omega$.
 
-For the DoC assessment of propulsion system of a multicopter, `bf` is just the control allocation matrix.
+For the DOC assessment of the quancopter's propulsion system, it is just the 4-by-m control allocation matrix.
 
 $$
-\left[\begin{matrix}\tau_x\\\tau_y\\\tau_z\\f\end{matrix}\right]
-=\mathbf{b}_f\left[\begin{matrix}f_1\\f_2\\\vdots\\f_n\end{matrix}\right]
+\left[\begin{matrix}\tau_x\\\tau_y\\\tau_z\\ f\end{matrix}\right]
+=\mathbf{b}_f\left[\begin{matrix}f_1\\f_2\\\vdots\\ f_n\end{matrix}\right]
 $$
 
-where $f_1,f_2,\cdots,f_n$ are the force that produced by each propeller.
+where $f_1,f_2,\cdots,f_n$ are the propeller thrusts.
 
 ---
 
-`fmax` —— The upper boundary of the original space.
+`fmax` —— The upper bound of each dimension of the space $U$. Specified as a numeric scalar of an array of length `m`.
 
-If it's a scalar, it determines the maximum value of each element of the space vector, namely $\left[0,f_{\max}\right]$.
-
-If it's a vector of the length `n`, its elements determine the maximum value of each corresponding element of the space vector.
-
----
-
-`fmin` —— The lower boundary of the original space.
-
-If it's a scalar, it determines the minmum value of each element of the space vector, namely $\left[0,f_{\min}\right]$.
-
-If it's a vector of the length `n`, its elements determine the minmum value of each corresponding element of the space vector.
+When the upper bounds of all the dimensions of $U$ are equal, specify it as a numeric scalar.
+Otherwise, specify it as an array of numeric scalars of length `m`.
 
 ---
 
-`G` —— An numpy array, whose shape is `(n, 1)`.
+`fmin` —— The lower bound of each dimension of the space $U$. Specified as a numeric scalar of an array of length `m`.
+
+When the lower bounds of all the dimensions of $U$ are equal, specify it as a numeric scalar.
+Otherwise, specify it as an array of numeric scalars of length `m`.
+
+The values of `fmin` should be no more than `fmax`.
+
+---
+
+`G` —— An point in $\Omega$. Specified as a 1-D array of length `n`.
 
 ## References
 
