@@ -14,6 +14,7 @@ W, CI, CR = analytical_hierarchy_process(A)
 ```
 
 The Analytic Hierarchy Process is a mathematical model for decision-making problems developed by Thomas L. Saaty.
+
 Computes the weight of each element according to pairwise comparison matrix `A`.
 The eigenvector of `A` corresponding to the maximum eigenvalue is chosen as the weight vector as default.
 
@@ -26,6 +27,7 @@ W, CI, CR = analytical_hierarchy_process(A, method)
 ```
 
 `method` specifies the way how to compute the weight vector.
+Default is `eigenvector`.
 
 ## Examples
 
@@ -50,7 +52,7 @@ W, CI, CR = analytical_hierarchy_process(A, method)
 
 ## Input Arguments
 
-`A` —— np.ndarray. The n-by-n pairwise comparison matrix.
+`A` —— The n-by-n pairwise comparison matrix.
 
 ---
 
@@ -68,22 +70,19 @@ $$
 That is,
 
 $$
+A\Rightarrow
 \left[\begin{matrix}\sqrt{a_1\cdot a_2}\\ \sqrt{a_3\cdot a_4}\end{matrix}\right]\Rightarrow\left[\begin{matrix}\frac{\sqrt{a_1\cdot a_2}}{\sqrt{a_1\cdot a_2}+\sqrt{a_3\cdot a_4}}\\ \frac{\sqrt{a_3\cdot a_4}}{\sqrt{a_1\cdot a_2}+\sqrt{a_3\cdot a_4}}\end{matrix}\right]
 $$
 
 - `arithmetic_mean`: the arithmetic mean of each row of matrix `A`.
 
 $$
-A=\left[\begin{matrix}\frac{a_1}{a_1+a_3}&\frac{a_2}{a_2+a_4}\\ \frac{a_3}{a_1+a_3}&\frac{a_4}{a_2+a_4}\end{matrix}\right]\Rightarrow\left[\begin{matrix}\frac{1}{2}\left(\frac{a_1}{a_1+a_3}+\frac{a_2}{a_2+a_4}\right)\\ \frac{1}{2}\left(\frac{a_3}{a_1+a_3}+\frac{a_4}{a_2+a_4}\right)\end{matrix}\right]
+A\Rightarrow\left[\begin{matrix}\frac{a_1}{a_1+a_3}&\frac{a_2}{a_2+a_4}\\ \frac{a_3}{a_1+a_3}&\frac{a_4}{a_2+a_4}\end{matrix}\right]\Rightarrow\left[\begin{matrix}\frac{1}{2}\left(\frac{a_1}{a_1+a_3}+\frac{a_2}{a_2+a_4}\right)\\ \frac{1}{2}\left(\frac{a_3}{a_1+a_3}+\frac{a_4}{a_2+a_4}\right)\end{matrix}\right]
 $$
 
 ## Output Arguments
 
-`W` —— The weight vector of length `n`.
-
----
-
-`CI` —— Consistency Index.
+A tuple `(W, CI, CR)`, where `W` is the weight vector of length `n`, `CI` is the Consistency Index, and `CR` is the Consistency Ratio.
 
 $$
 CI = \frac{\lambda_{\max}-n}{n-1}<\frac{\sigma^2}{2}
@@ -93,10 +92,6 @@ where $\frac{\sigma^2}{2}$ provides an upper bound for the measure of consistenc
 
 It is used as a measure of the closeness of $A$ to consistency.
 So the matrix $A$ is consistency if $\lambda_{\max}=n$.
-
----
-
-`CR` —— Consistency Ratio.
 
 It can be noted that if $n$ is large, then $CI<\frac{\sigma^2}{2}$ even if $\lambda_{\max}$ if far away from $n$.
 Therefore, for a large number of objectives, $CI$ might not provide a meaningful measure of consistency.

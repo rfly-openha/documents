@@ -14,9 +14,10 @@ profust_reliability(s, msf)
 R = profust_reliability(s, msf)
 ```
 
+Compute the profust reliability according to the research in [1].
+
 `s` is an array of system state vectors if `msf` is not `None`.
-Otherwise, `s` is an array of the degree of membership of system states.
-And `msf` can be the membership function or just `None`.
+Otherwise, `s` is an array of the degree of membership of system states, and the `msf` specifies the membership function.
 
 Suppose that the system is in a specific state $S_q$ at time $t_0$ for certain, and the system is in a specific state $S_j$ at time $t$ for certain.
 

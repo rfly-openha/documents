@@ -14,7 +14,7 @@ average_rectified_value(x)
 m = average_rectified_value(x)
 ```
 
-In electrical engineering, the average rectified value of a quantity is the average of its absolute value.
+In electrical engineering, the average rectified value is the average of its absolute value.
 
 That is,
 

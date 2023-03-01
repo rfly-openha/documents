@@ -28,6 +28,8 @@ $$
 \bar{x}=\frac{1}{n}\sum_i^n x_i
 $$
 
+$\sigma$ is the unbiased estimate of the standard deviation.
+
 ## Examples
 
 ```python

@@ -16,7 +16,7 @@ y_est = interpolation(x, y, x_est)
 ```
 
 `x` and `y` are arrays of values used to approximate some function `f: y = f(x)`.
-This function returns an array of the interpolated values at `x_est` by linear interpolation.
+This function returns an array of the interpolated values at `x_est` by linear interpolation as default.
 
 ---
 
@@ -24,7 +24,7 @@ This function returns an array of the interpolated values at `x_est` by linear i
 y_est = interpolation(x, y, x_est, kind)
 ```
 
-The interpolation method is specified by the `kind`.
+The interpolation method is specified by the parameter `kind`.
 
 ## Examples
 
@@ -68,7 +68,7 @@ The interpolation method is specified by the `kind`.
 
 ## Input Arguments
 
-`x` —— A 1-D array of real value.
+`x` —— $x$-coordinates. A 1-D array of real value.
 
 ---
 
@@ -82,8 +82,8 @@ The interpolation method is specified by the `kind`.
 
 `kind` —— Kind of interpolation, specified as one of the following strings.
 
-- 'zero', 'slinear', 'quadratic' and 'cubic' refer to a spline interpolation of zeroth, first, second or third order.
-- 'previous' and 'next' simply return the previous or next value of the point.
-- 'nearest-up' and 'nearest' differ when interpolating half-integers (e.g., 0.5, 1.5) in that 'nearest-up' rounds up and 'nearest' rounds down.
+- `zero`, `slinear`, `quadratic` and `cubic` refer to a spline interpolation of zeroth, first, second or third order.
+- `previous` and `next` simply return the previous or next value of the point.
+- `nearest-up` and `nearest` differ when interpolating half-integers (e.g., 0.5, 1.5) in that `nearest-up` rounds up and `nearest` rounds down.
 
-The default is 'linear'.
+The default is `linear`.

@@ -19,7 +19,7 @@ Calculates the k-th raw moment of all the observations.
 That is,
 
 $$
-A_k = \frac{1}{n}\sum_{i=1}^nx_i^k
+a_k = \frac{1}{n}\sum_{i=1}^nx_i^k
 $$
 
 where $x_i,i=1,2,\cdots,n$ represents the $i$-th observed value.
@@ -42,7 +42,7 @@ where $x_i,i=1,2,\cdots,n$ represents the $i$-th observed value.
 
 ## Input Arguments
 
-`x` —— A N-D array of observations.
+`x` —— The value of observations, specified as an array of N-D array of length `n`.
 
 For an n-by-m array, it indicates `n` observations with `m` features.
 

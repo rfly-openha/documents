@@ -18,8 +18,10 @@ Computes the Gramian-matrix-based DOC of an LTI system, which refers to equation
 The mathematical principle is available in Section 2.2 of [2].
 
 $$
-\dot{\mathbf{x}}=\mathbf{A}\left(t\right)\mathbf{x}+\mathbf{B}\left(t\right)\mathbf{u}\\
-\mathbf{y}=\mathbf{C}\left(t\right)\mathbf{x}
+\begin{aligned}
+\dot{\mathbf{x}}&=\mathbf{A}\left(t\right)\mathbf{x}+\mathbf{B}\left(t\right)\mathbf{u}\\
+\mathbf{y}&=\mathbf{C}\left(t\right)\mathbf{x}
+\end{aligned}
 $$
 
 For the above linear time-variant system, we recall the relation of the controllability problem to the fixed-time minimum-energy transfer control problem.
@@ -103,4 +105,5 @@ A tuple `(rho1, rho2, rho3)`, whose physical meanings are introduced above.
 ## References
 
 [1] G.-X. Du, Q. Quan, "Degree of Controllability and its Application in Aircraft Flight Control," Journal of Systems Science and Mathematical Sciences, vol. 34, no. 12, pp. 1578-1594, 2014.
+
 [2] P.C. Müller, H.I. Weber, "Analysis and optimization of certain qualities of controllability and observability for linear dynamical systems," vol. 8, no. 3, pp. 237-246, 1972. DOI: 10.1016/0005-1098(72)90044-1.

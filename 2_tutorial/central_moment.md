@@ -19,7 +19,7 @@ Compute the k-th central moment of all the observations.
 That is,
 
 $$
-B_k = \frac{1}{n}\sum_{i=1}^n\left(x_i-\bar{x}\right)^k
+b_k = \frac{1}{n}\sum_{i=1}^n\left(x_i-\bar{x}\right)^k
 $$
 
 where $x_i,i=1,2,\cdots,n$ represents the $i$-th observed value, and
@@ -47,7 +47,7 @@ $$
 
 ## Input Arguments
 
-`x` —— A N-D array of observations.
+`x` —— The value of observations, specified as an array of N-D array of length `n`.
 
 For an n-by-m array, it indicates `n` observations with `m` features.
 

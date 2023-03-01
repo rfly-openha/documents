@@ -1,6 +1,6 @@
 # `acai`
 
-Computes the degree of controllability (DOC) based on the Availability Control Authority Index, namely ACAI, which is proposed by Guang-Xu Du in his paper [1].
+Computes the degree of controllability (DOC) based on the Availability Control Authority Index, namely ACAI, which is proposed by Guang-Xu Du in [1].
 
 ## Syntax
 
@@ -14,7 +14,7 @@ acai(bf, fmax, fmin, G)
 doc = acai(bf, fmax, fmin, G)
 ```
 
-Computes the DOC based on ACAI according to the theory and method that is introduced in the paper.
+Computes the DOC based on ACAI according to the theory and method that are introduced in the paper.
 
 In mathematics, an enclosed space $U$ is defined as
 
@@ -28,7 +28,7 @@ $$
 \Omega = \{\mathbf{u}|\mathbf{u}=\mathbf{B}_f\mathbf{f},\mathbf{f}\in U\}
 $$
 
-In mathematics, the ACAI is essentially the minimum of the nearest distances between the boundary of $\Omega$ with the given point $\mathbf{G}$.
+In mathematics, the ACAI is essentially the minimum of the nearest distances between the boundary of $\Omega$ and the given point $\mathbf{G}$.
 
 ## Examples
 
@@ -49,7 +49,7 @@ In mathematics, the ACAI is essentially the minimum of the nearest distances bet
 
 `bf` —— An n-by-m matrix, which refers to the linear map from $U$ to $\Omega$.
 
-For the DOC assessment of the quancopter's propulsion system, it is just the 4-by-m control allocation matrix.
+For the DOC assessment of the quancopter's propulsion system, it is just the 4-by-m control allocation matrix $\mathbf{b}_f$.
 
 $$
 \left[\begin{matrix}\tau_x\\\tau_y\\\tau_z\\ f\end{matrix}\right]
@@ -60,14 +60,14 @@ where $f_1,f_2,\cdots,f_n$ are the propeller thrusts.
 
 ---
 
-`fmax` —— The upper bound of each dimension of the space $U$, specified as a numeric scalar of an array of length `m`.
+`fmax` —— The upper bound of each dimension of the space $U$, specified as a numeric scalar or an array of length `m`.
 
 When the upper bounds of all the dimensions of $U$ are equal, specify it as a numeric scalar.
 Otherwise, specify it as an array of numeric scalars of length `m`.
 
 ---
 
-`fmin` —— The lower bound of each dimension of the space $U$, specified as a numeric scalar of an array of length `m`.
+`fmin` —— The lower bound of each dimension of the space $U$, specified as a numeric scalar or an array of length `m`.
 
 When the lower bounds of all the dimensions of $U$ are equal, specify it as a numeric scalar.
 Otherwise, specify it as an array of numeric scalars of length `m`.

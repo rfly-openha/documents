@@ -1,14 +1,14 @@
 # `template_of_document`
 
-This is a template for developers to form a document for their user-defined function, which is important and useful for beginners to learn how to call the function.
-The work might be boring and dull but significant.
+This is a template for developers to write a document for their user-defined function, which is important and useful for beginners to learn how to call the function.
+The work might be boring and dull but significant at the same time.
 
 Some basic rules are listed in this file, including the use of words, phrases, syntax, etc.
 Hope that it can assist you to write a formal, neat, and easy-to-understand document that is also consistent with ours.
 
-**Please note that here are just some suggestions rather than laws or regulations. To make yourself understood by other users is always the first thing that you need to concern about.**
+**Please note that there are just some suggestions rather than laws or regulations. To make yourself understood by other users is always the first thing that you need to concern about.**
 
-Be free to @[CuiiGen](https://github.com/CuiiGen) if you have any questions.
+Please be free to @[CuiiGen](https://github.com/CuiiGen) if you have any questions.
 It's quite a pleasure for us to have you.
 
 ## Syntax
@@ -18,7 +18,7 @@ Different ways to call the function should be listed as follows.
 ```python
 function_name(arg1)
 function_name(arg1, arg2)
-function_name(arg1, arg2, *args, **kwargs)
+function_name(arg1, arg2, **kwargs)
 ```
 
 ## Description
@@ -47,7 +47,7 @@ Besides, pay attention to these two terms, "argument" and "parameter", which are
 - An argument represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.
 
 More information is available on [argument vs. parameter
-](https://learn.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/a/argument-vs-parameter) or [Differences Between Parameters and Arguments (Visual Basic)](https://learn.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments).
+](https://learn.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/a/argument-vs-parameter) and [Differences Between Parameters and Arguments (Visual Basic)](https://learn.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments).
 
 ### Tips about using matrix, vector, array, and list
 
@@ -122,11 +122,11 @@ The procedure is shown as follows.
 1. Download Typora from its [official website](https://typora.io/) and then install it.
 1. Download the [theme "Vue"](https://theme.typoraio.cn/theme/Vue/) and install it with the help of this [guide](https://support.typora.io/About-Themes/).
 1. Download and install the [Pandoc](https://www.pandoc.org/).
-1. Export this file in the format of `HTML`.
+1. Open this file in Typora and then export it in the format of `HTML`.
 1. Save it to `/2_tutorial/` and modify `index.html` correspondingly.
 
 ## References
 
-Last but not least, all the literature, papers, or other supporting materials that you referred to should be listed at the end of this file.
+Last but not least, all the literature, reports, online websites, or other supporting materials that you referred to should be listed at the end of this file.
 
 [BibTeX bibliography style: IEEEtran](https://www.bibtex.com/s/bibliography-style-ieeetran-ieeetran/) is recommended.

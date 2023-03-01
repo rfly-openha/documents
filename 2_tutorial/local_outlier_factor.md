@@ -12,9 +12,8 @@ local_outlier_factor(points, k)
 lof = local_outlier_factor(points, k)
 ```
 
-The local outlier factor algorithm.
-
-Compute the local outlier factors of all the points outliers by the local outlier factor.
+The Local Outlier Factor (LOF) of all the points are computed.
+And the LOF is an algorithm used for outlier detection, which is proposed by Breunig in [1].
 
 ## Examples
 
