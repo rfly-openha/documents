@@ -59,7 +59,7 @@ And `map_location` is needed to specify how to remap storage locations in PyTorc
 
 ---
 
-`source` —— The framework in which the network is build, PyTorch or TensorFlow. Specified as `pytorch` (default) or `tensorflow`.
+`source` —— The framework in which the network is build, PyTorch or TensorFlow, specified as `pytorch` (default) or `tensorflow`.
 
 ---
 

@@ -1,6 +1,6 @@
 # `average_rectified_value`
 
-Compute the average rectified value.
+Calculates the average rectified value.
 
 ## Syntax
 
@@ -16,9 +16,13 @@ m = average_rectified_value(x)
 
 In electrical engineering, the average rectified value of a quantity is the average of its absolute value.
 
+That is,
+
 $$
-\frac{1}{n}\sum_{i=1}^n\left|x_i\right|
+X_\text{ARV} = \frac{1}{n}\sum_{i=1}^n\left|x_i\right|
 $$
+
+where $x_i,i=1,2,\cdots,n$ represents the $i$-th observed value.
 
 ## Examples
 
@@ -35,4 +39,4 @@ $$
 
 ## Input Arguments
 
-`x` —— Samples of a quantity.
+`x` —— A 1-D array of observations of length `n`, namely `n` observations of a quantity.

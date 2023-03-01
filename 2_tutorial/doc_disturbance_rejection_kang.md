@@ -12,19 +12,41 @@ doc_disturbance_rejection_kang(A, B, D, Sw)
 rho = doc_disturbance_rejection_kang(A, B, D, Sw)
 ```
 
-This method is used to calculate the controllability of an LTI system to reject disturbances.
+This function is used to compute the new measure representing degree of controllability for disturbance rejection.
+
+For the following LTI system
 
 $$
-\dot{\mathbf{x}} = \mathbf{A}\mathbf{x}+\mathbf{B}\mathbf{u}+\mathbf{D}\mathbf{\omega}
+\dot{\mathbf{x}} = \mathbf{A}\mathbf{x}\left(t\right)+\mathbf{B}\mathbf{u}\left(t\right)+\mathbf{D}\mathbf{w}\left(t\right)
 $$
 
-where $\omega$ is a disturbance with covariance `Sw`.
+where $\mathbf{w}\left(t\right)$ is the disturbance vector.
+The disturbance is assumed to be Gaussian white noise with the known correlation
+function.
+Its Covariance matrix is $\mathbf{S}_w$.
 
 A new measure representing degree of controllability for disturbance rejection in presented in [1].
 
-Specifically, a method is given for calculating this DoC for a general system.
+The controllability Grammian of the system can be calculated by solving the
+following differential equation:
 
-For LTI systems, it is proven that the differential equation is equivalent to the lyapunov equation.
+$$
+\dot{\mathbf{W}}\left(t\right)=\mathbf{A}\mathbf{W}\left(t\right)+\mathbf{W}\left(t\right)\mathbf{A}'+\mathbf{B}\mathbf{B}'
+$$
+
+Similarly, the disturbance-sensitivity Grammian satisfies the following differential equation:
+
+$$
+\dot{\mathbf{\Sigma}}\left(t\right)=\mathbf{A}\mathbf{\Sigma}\left(t\right)+\mathbf{\Sigma}\left(t\right)\mathbf{A}'+\mathbf{D}\mathbf{S}_w\mathbf{D}'
+$$
+
+Then,
+
+$$
+\rho = \mathbf{tr}\left\{\mathbf{W}\left(T\right)^{-1}\cdot\mathbf{\Sigma}\left(T\right)\right\}
+$$
+
+To eliminate this dependency of the measure on $T$, consider steady-state solutions of Eqs. (5) and (6), satisfying Eqs. (16) and (17) in [1] for asymptotically stable systems:
 
 $$
 \begin{aligned}
@@ -36,7 +58,7 @@ $$
 Then
 
 $$
-\rho = \mathbf{tr}\left\{\bar{\mathbf{\Sigma}}\cdot\bar{\mathbf{W}}^{-1}\right\}
+\rho = \mathbf{tr}\left\{\bar{\mathbf{W}}^{-1}\cdot\bar{\mathbf{\Sigma}}\right\}
 $$
 
 Details of the proof and other details can be found in the original literature.
@@ -63,25 +85,25 @@ Details of the proof and other details can be found in the original literature.
 
 >>> doc_disturbance_rejection_kang(A, B, D, Sw)
 
-6.000000000000201
+5.999999999999998
 
 ```
 
 ## Input Arguments
 
-`A` —— State matrix of the state space equation, which is n-by-n.
+`A` —— System transition matrix of the state-space model of an LTI system, specified as an n-by-n square matrix.
 
 ---
 
-`B` —— Input matrix of the state space equation, which is n-by-p.
+`B` —— Input coefficient matrix of the state-space model of an LIT system, specified as an n-by-r matrix.
 
 ---
 
-`D` —— Matrix with proper dimension.
+`D` —— Disturbance matrix, specified as an n-by-l matrix.
 
 ---
 
-`Sw` —— Covariance matrix of disturbance vector $\omega$, with proper dimension.
+`Sw` —— Covariance matrix of disturbance vectors, specified as an l-by-l square matrix.
 
 ## References
 

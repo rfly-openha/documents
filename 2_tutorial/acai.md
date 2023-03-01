@@ -60,14 +60,14 @@ where $f_1,f_2,\cdots,f_n$ are the propeller thrusts.
 
 ---
 
-`fmax` —— The upper bound of each dimension of the space $U$. Specified as a numeric scalar of an array of length `m`.
+`fmax` —— The upper bound of each dimension of the space $U$, specified as a numeric scalar of an array of length `m`.
 
 When the upper bounds of all the dimensions of $U$ are equal, specify it as a numeric scalar.
 Otherwise, specify it as an array of numeric scalars of length `m`.
 
 ---
 
-`fmin` —— The lower bound of each dimension of the space $U$. Specified as a numeric scalar of an array of length `m`.
+`fmin` —— The lower bound of each dimension of the space $U$, specified as a numeric scalar of an array of length `m`.
 
 When the lower bounds of all the dimensions of $U$ are equal, specify it as a numeric scalar.
 Otherwise, specify it as an array of numeric scalars of length `m`.
@@ -76,7 +76,7 @@ The values of `fmin` should be no more than `fmax`.
 
 ---
 
-`G` —— An point in $\Omega$. Specified as a 1-D array of length `n`.
+`G` —— An point in $\Omega$, specified as a 1-D array of length `n`.
 
 ## References
 

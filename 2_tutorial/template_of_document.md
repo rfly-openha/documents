@@ -1,6 +1,6 @@
 # `template_of_document`
 
-This is a template for developers to form a document or their user-defined function, which is important and useful for beginners to learn how to call the function.
+This is a template for developers to form a document for their user-defined function, which is important and useful for beginners to learn how to call the function.
 The work might be boring and dull but significant.
 
 Some basic rules are listed in this file, including the use of words, phrases, syntax, etc.

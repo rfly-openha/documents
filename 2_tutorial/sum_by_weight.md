@@ -12,15 +12,16 @@ sum_by_weight(weights, elements)
 sum = sum_by_weight(weights, elements)
 ```
 
-Compute weighted sum. `weights` and `elements` both are arraies of length `n`.
+Calculates the weighted sum.
+`weights` specifies the weight vector, and `elements` is an array of the values of all the elements.
 
-This method returns the weighted sum, namely
+The weighted sum is
 
 $$
-\sum_{i=1}^{n}w_ix_i
+s  = \sum_{i=1}^{n}w_ix_i
 $$
 
-where $w_i$ is the weight of the i-th elements $x_i$, and $i=1,2,\cdots,n$.
+where $w_i$ is the weight of the $i$-th value $x_i$, and $i=1,2,\cdots,n$.
 
 ## Examples
 
@@ -38,11 +39,9 @@ where $w_i$ is the weight of the i-th elements $x_i$, and $i=1,2,\cdots,n$.
 
 ## Input Arguments
 
-`weights` —— Array of weights of each element.
+`weights` —— The weight vector, specified as an array of positive numeric scalar of length `n`.
 
-The length of `weights` should be equal to that of `elements`.
-
-And the following equation should be satisfied.
+And it should satisfy
 
 $$
 \sum_{i=1}^nw_i=1,w_i>0
@@ -50,4 +49,4 @@ $$
 
 ---
 
-`elements` —— Array of all the elements, whose length is equal to that of `weights`.
+`elements` —— Array of values of all the elements, specified as an array of length `n`.

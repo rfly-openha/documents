@@ -1,24 +1,24 @@
-# `kurtosis`
+# `skewness`
 
-Compute the kurtosis.
+Compute the skewness.
 
 ## Syntax
 
 ```python
-kurtosis(x)
+skewness(x)
 ```
 
 ## Description
 
 ```python
-m = kurtosis(x)
+m = skewness(x)
 ```
 
-Compute the kurtosis of all the observations.
-For a random variable $X$, its kurtosis is,
+Compute the skewness of all the observations.
+For a random variable $X$, its skewness is,
 
 $$
-\text{kurtosis} = \frac{E\left[\left(X-\mu\right)^4\right]}{\sigma^4}
+\text{skewness} = \frac{E\left[\left(X-\mu\right)^3\right]}{\sigma^3}
 $$
 
 Where $\mu = E\left(X\right)$ and $\sigma = \sqrt{D\left(X\right)}$.
@@ -26,7 +26,7 @@ Where $\mu = E\left(X\right)$ and $\sigma = \sqrt{D\left(X\right)}$.
 And its observation is
 
 $$
-\text{kurtosis} = \sum_{i=1}^{n}\frac{\left(x_i-\bar{x}\right)^4}{n}\frac{1}{s^4}
+\text{skewness} = \sum_{i=1}^{n}\frac{\left(x_i-\bar{x}\right)^3}{n}\frac{1}{s^3}
 $$
 
 where $x_i,i=1,2,\cdots,n$ represents the $i$-th observed value, and
@@ -38,14 +38,14 @@ $$
 ## Examples
 
 ```python
->>> from OpenHA.manipulation.feature import kurtosis
+>>> from OpenHA.manipulation.feature import skewness
 >>> import numpy as np
 
-# normal distribution
+# sample from a normal distribution
 >>> x = np.random.randn(1000)
->>> print(kurtosis(x))
+>>> print(skewness(x))
 
-2.968569898977294
+0.032533505273764085
 
 ```
 

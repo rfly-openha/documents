@@ -12,9 +12,9 @@ local_outlier_factor(points, k)
 lof = local_outlier_factor(points, k)
 ```
 
-The local outlier factor algorithm
+The local outlier factor algorithm.
 
-Detect outliers by the local outlier factor.
+Compute the local outlier factors of all the points outliers by the local outlier factor.
 
 ## Examples
 
@@ -31,12 +31,12 @@ Detect outliers by the local outlier factor.
 
 ## Input Arguments
 
-`points` —— Specified as a numeric matrix. Each row of X corresponds to one observation, and each column corresponds to one predictor variable.
+`points` —— An array of vectors of length `n`, namely `n` points, specified as an N-D array.
 
 ---
 
-`k` —— Number of nearest neighbors in the `points` to find for computing the local outlier factor values, specified as a positive integer value.
+`k` —— Number of neighbors for k-distance and k-neighbors, specified as a positive integer scalar.
 
 ## References
 
-[1] Breunig, Markus M., et al. "LOF: Identifying Density-Based Local Outliers." Proceedings of the 2000 ACM SIGMOD International Conference on Management of Data, 2000, pp. 93–104.
+[1] M. M. Breunig, H.-P. Kriegel, R. T, Y. Ng, J. Sander. "LOF: Identifying Density-Based Local Outliers." Proceedings of the 2000 ACM SIGMOD International Conference on Management of Data, 2000, pp. 93–104. DOI: 10.1145/342009.335388.

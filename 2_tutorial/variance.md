@@ -1,6 +1,6 @@
 # `variance`
 
-Compute the variance.
+Calculates the variance.
 
 ## Syntax
 
@@ -14,10 +14,18 @@ variance(x, k)
 m = variance(x, k)
 ```
 
-Returns the variance of the array elements, a measure of the spread of a distribution.
+Calculates the variance of all the observations.
+
+That is
 
 $$
-\sigma^2=\frac{1}{n-1}\sum_{i=1}^n \left(x_i-\mu\right)^2
+\sigma^2=\frac{1}{n-1}\sum_{i=1}^n \left(x_i-\bar{x}\right)^2
+$$
+
+where $x_i,i=1,2,\cdots,n$ represents the $i$-th observed value, and
+
+$$
+\bar{x}=\frac{1}{n}\sum_i^n x_i
 $$
 
 ## Examples
@@ -35,4 +43,6 @@ $$
 
 ## Input Arguments
 
-`x` —— np.ndarray, whose shape is (n, m), refer to `n` samples and the length of each is `m`.
+`x` —— A N-D array of observations.
+
+For an n-by-m array, it indicates `n` observations with `m` features.

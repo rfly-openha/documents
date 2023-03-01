@@ -1,6 +1,6 @@
 # `raw_moment`
 
-Compute the raw moment.
+Calculates the raw moment.
 
 ## Syntax
 
@@ -14,11 +14,15 @@ raw_moment(x, k)
 m = raw_moment(x, k)
 ```
 
-Compute the k-th raw moment of the timeseries `x`, whose length is `n`.
+Calculates the k-th raw moment of all the observations.
+
+That is,
 
 $$
-\frac{1}{n}\sum_{i=1}^nx_i^k
+A_k = \frac{1}{n}\sum_{i=1}^nx_i^k
 $$
+
+where $x_i,i=1,2,\cdots,n$ represents the $i$-th observed value.
 
 ## Examples
 
@@ -29,14 +33,19 @@ $$
 >>> x = np.array([0, 1, 2, 3, 4])
 >>> print(raw_moment(x, 2))
 
+# = (0^2 + 1^2 + 2^2 + 3^2 + 4^2) / 5
+# = (0 + 1 + 4 + 9 + 16) / 5
+# = 30 / 5
 6
 
 ```
 
 ## Input Arguments
 
-`x` —— Samples of a signal, whose shape is `(n, m)`, refer to `n` samples and the length of each is `m`.
+`x` —— A N-D array of observations.
+
+For an n-by-m array, it indicates `n` observations with `m` features.
 
 ---
 
-`k` —— The number of the order.
+`k` —— Order of raw moment, specified as a positive integer scalar.

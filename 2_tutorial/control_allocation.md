@@ -63,7 +63,7 @@ array([[ 1.       ,  1.       ,  1.       ,  1.       ],
 
 ## Input Arguments
 
-`n` —— The number of propellers of a multicopter. Specified as a positive integer scalar.
+`n` —— The number of propellers of a multicopter, specified as a positive integer scalar.
 
 ---
 
@@ -86,7 +86,7 @@ Otherwise, specify `ku` as an array of positive values of length `n`.
 
 ---
 
-`init_angle` —— The angle from $O_\text{b}x_\text{b}$ axis to each supporting arm of the propeller in clockwise direction in radians. Specified as `0` (default), real numeric scalar, or an array of positive values of length `n`.
+`init_angle` —— The angle from $O_\text{b}x_\text{b}$ axis to each supporting arm of the propeller in clockwise direction in radians, specified as `0` (default), real numeric scalar, or an array of positive values of length `n`.
 
 When all the propellers are distributed evenly, specify `init_angle` as a positive value.
 It then indicates the angle of propeller #1, namely $\phi_1$ = `init_angle`.
@@ -101,14 +101,14 @@ That is, $\phi_i,i=1,2,\cdots,n$ are assigned seperately.
 
 ---
 
-`drct` —— The rotation direction of each propeller. Specified as an array of length `n`, in which each element is `-1` or `1`. Default is `[1, -1, 1, -1, 1, -1]`.
+`drct` —— The rotation direction of each propeller, specified as an array of length `n`, in which each element is `-1` or `1`. Default is `[1, -1, 1, -1, 1, -1]`.
 
 - `1` means the corresponding propeller rotates counterclockwise.
 - `-1` means the corresponding propeller rotates clockwise.
 
 ---
 
-`eta` —— The efficient coefficient of each propeller. Specified as `1` (default), a numeric value in $\left[0,1\right]$, or an array of length `n`, in which each element is in $\left[0,1\right]$.
+`eta` —— The efficient coefficient of each propeller, specified as `1` (default), a numeric value in $\left[0,1\right]$, or an array of length `n`, in which each element is in $\left[0,1\right]$.
 
 ---
 

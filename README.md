@@ -8,7 +8,7 @@
     1. 使用手册
     1. API库
         1. [acai](./2_tutorial/acai.html)
-        1. [analytical_hierarchy_process](./2_tutorial/analytical_hierarchy_process.html)    
+        1. [analytical_hierarchy_process](./2_tutorial/analytical_hierarchy_process.html)
         1. [average_rectified_value](./2_tutorial/average_rectified_value.html)
         1. [central_moment](./2_tutorial/central_moment.html)
         1. [control_allocation](./2_tutorial/control_allocation.html)
@@ -23,7 +23,7 @@
         1. [raw_moment](./2_tutorial/raw_moment.html)
         1. [split_dataset](./2_tutorial/split_dataset.html)
         1. [sum_by_weight](./2_tutorial/sum_by_weight.html)
-        1. [trapezoidal_membership_func](./2_tutorial/trapezoidal_membership_func.html)      
+        1. [trapezoidal_membership_func](./2_tutorial/trapezoidal_membership_func.html)
         1. [variance](./2_tutorial/variance.html)
     1. 实践案例
 - 开发者文档

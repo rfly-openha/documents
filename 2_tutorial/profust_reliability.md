@@ -1,5 +1,7 @@
 # `profust_reliability`
 
+Compute the profust reliability according to the research in [1].
+
 ## Syntax
 
 ```python
@@ -12,12 +14,13 @@ profust_reliability(s, msf)
 R = profust_reliability(s, msf)
 ```
 
-`s` is a list of system states which indicate the performance of the system.
-And `msf` is the membership function.
+`s` is an array of system state vectors if `msf` is not `None`.
+Otherwise, `s` is an array of the degree of membership of system states.
+And `msf` can be the membership function or just `None`.
 
-Suppose that the system performance is in a specific state $S_q$ at time $t_0$ for certain, and the system performance is in a specific state $S_j$ at time $t$ for certain.
+Suppose that the system is in a specific state $S_q$ at time $t_0$ for certain, and the system is in a specific state $S_j$ at time $t$ for certain.
 
-Then the performance profust reliability is
+Then the profust reliability is
 
 $$
 R\left(t\right)=\mu_S\left(S_q\right)\left[1-\mu_{T_{\text{SF}}}\left(m_{qj}\right)\right]
@@ -50,14 +53,14 @@ More details and the proof are available in [1].
 
 ## Input Arguments
 
-`s` —— A list of system states.
+`s` —— An array of system state vectors if `msf` is not None.
+Otherwise, its an array of the degree of membership of system states.
 
 ---
 
-`f` —— The membership function.
+`f` —— The membership function, specified as a callble object, or just `None`.
 
-Membership function represents the degree of membership between an element and a set.
-
+The membership function represents the degree of membership between an element and a set.
 In fuzzy mathematics, the degree of membership is in $[0,1]$.
 
 ---

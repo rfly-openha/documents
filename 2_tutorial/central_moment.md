@@ -1,6 +1,6 @@
 # `central_moment`
 
-Compute the central moment.
+Calculates the central moment.
 
 ## Syntax
 
@@ -14,10 +14,18 @@ central_moment(x, k)
 m = central_moment(x, k)
 ```
 
-Compute the k-th central moment of the timeseries `x`, whose length is `n`.
+Compute the k-th central moment of all the observations.
+
+That is,
 
 $$
-\frac{1}{n}\sum_{i=1}^n\left(x_i-\bar{x}\right)^k
+B_k = \frac{1}{n}\sum_{i=1}^n\left(x_i-\bar{x}\right)^k
+$$
+
+where $x_i,i=1,2,\cdots,n$ represents the $i$-th observed value, and
+
+$$
+\bar{x}=\frac{1}{n}\sum_i^n x_i
 $$
 
 ## Examples
@@ -29,14 +37,20 @@ $$
 >>> x = np.array([0, 1, 2, 3, 4])
 >>> print(central_moment(x, 2))
 
+# x_ = 2
+# = ((-2)^2 + 1^2 + 0^2 + 1^2 + 2^2) / 5
+# = (4 + 1 + 0 + 1 + 4) / 5
+# = 10 / 5
 2
 
 ```
 
 ## Input Arguments
 
-`x` —— Samples of a signal, whose shape is `(n, m)`, refer to `n` samples and the length of each is `m`.
+`x` —— A N-D array of observations.
+
+For an n-by-m array, it indicates `n` observations with `m` features.
 
 ---
 
-`k` —— The number of the order.
+`k` —— Order of raw moment, specified as a positive integer scalar.

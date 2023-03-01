@@ -6,7 +6,7 @@ Interpolation.
 
 ```python
 interpolation(x, y, x_est)
-interpolation(x, y, x_est, method)
+interpolation(x, y, x_est, kind)
 ```
 
 ## Description
@@ -15,15 +15,16 @@ interpolation(x, y, x_est, method)
 y_est = interpolation(x, y, x_est)
 ```
 
-The value of the original data at `x_est` is estimated from the input `x`, `y` and the by linear algorithm.
+`x` and `y` are arrays of values used to approximate some function `f: y = f(x)`.
+This function returns an array of the interpolated values at `x_est` by linear interpolation.
 
 ---
 
 ```python
-y_est = interpolation(x, y, x_est, method)
+y_est = interpolation(x, y, x_est, kind)
 ```
 
-The interpolation method is specifiedd by the argument `method`.
+The interpolation method is specified by the `kind`.
 
 ## Examples
 
@@ -71,9 +72,18 @@ The interpolation method is specifiedd by the argument `method`.
 
 ---
 
-`y` —— A 1-D array of real values. The length of `y` along the interpolation axis must be equal to the length of `x`.
+`y` —— A N-D array of real values. The length of `y` along the interpolation axis must be equal to the length of `x`.
 
 ---
 
-`method` —— Specifies the kind of interpolation as a string or as an integer specifying the order of the spline interpolator to use. The string has to be one of 'linear', 'nearest', 'nearest-up', 'zero', 'slinear', 'quadratic', 'cubic', 'previous', or 'next'. 'zero', 'slinear', 'quadratic' and 'cubic' refer to a spline interpolation of zeroth, first, second or third order; 'previous' and 'next' simply return the previous or next value of the point; 'nearest-up' and 'nearest' differ when interpolating half-integers (e.g. 0.5, 1.5) in that 'nearest-up' rounds up and 'nearest' rounds down. Default is 'linear'.
+`x_est` —— A 1-D array of values to evaluate the interpolant.
 
+---
+
+`kind` —— Kind of interpolation, specified as one of the following strings.
+
+- 'zero', 'slinear', 'quadratic' and 'cubic' refer to a spline interpolation of zeroth, first, second or third order.
+- 'previous' and 'next' simply return the previous or next value of the point.
+- 'nearest-up' and 'nearest' differ when interpolating half-integers (e.g., 0.5, 1.5) in that 'nearest-up' rounds up and 'nearest' rounds down.
+
+The default is 'linear'.
