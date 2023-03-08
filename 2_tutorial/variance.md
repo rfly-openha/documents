@@ -33,7 +33,7 @@ $\sigma$ is the unbiased estimate of the standard deviation.
 ## Examples
 
 ```python
->>> from OpenHA.manipulation.feature import variance
+>>> from OpenHA.processing.feature import variance
 >>> import numpy as np
 
 >>> x = np.array([0, 1, 2, 3, 4])

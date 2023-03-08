@@ -31,7 +31,7 @@ $$
 ## Examples
 
 ```python
->>> from OpenHA.manipulation.feature import central_moment
+>>> from OpenHA.processing.feature import central_moment
 >>> import numpy as np
 
 >>> x = np.array([0, 1, 2, 3, 4])

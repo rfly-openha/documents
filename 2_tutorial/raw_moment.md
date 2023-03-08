@@ -27,7 +27,7 @@ where $x_i,i=1,2,\cdots,n$ represents the $i$-th observed value.
 ## Examples
 
 ```python
->>> from OpenHA.manipulation.feature import raw_moment
+>>> from OpenHA.processing.feature import raw_moment
 >>> import numpy as np
 
 >>> x = np.array([0, 1, 2, 3, 4])

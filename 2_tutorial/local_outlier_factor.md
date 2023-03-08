@@ -12,13 +12,13 @@ local_outlier_factor(points, k)
 lof = local_outlier_factor(points, k)
 ```
 
-The Local Outlier Factor (LOF) of all the points are computed.
+The Local Outlier Factors (LOF) of all the points are computed.
 And the LOF is an algorithm used for outlier detection, which is proposed by Breunig in [1].
 
 ## Examples
 
 ```python
->>> from OpenHA.manipulation.preprocess import local_outlier_factor
+>>> from OpenHA.processing.preprocess import local_outlier_factor
 >>> import numpy as np
 
 >>> points = np.array([0, 1, 1.2, 2, 3, 10])

@@ -27,7 +27,7 @@ where $x_i,i=1,2,\cdots,n$ represents the $i$-th observed value.
 ## Examples
 
 ```python
->>> from OpenHA.manipulation.feature import average_rectified_value
+>>> from OpenHA.processing.feature import average_rectified_value
 >>> import numpy as np
 
 >>> x = np.array([0, 1, 2, 3, 4])

@@ -38,7 +38,7 @@ $$
 ## Examples
 
 ```python
->>> from OpenHA.manipulation.feature import skewness
+>>> from OpenHA.processing.feature import skewness
 >>> import numpy as np
 
 # sample from a normal distribution

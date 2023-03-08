@@ -29,7 +29,7 @@ The interpolation method is specified by the parameter `kind`.
 ## Examples
 
 ```python
->>> from OpenHA.manipulation.preprocess import interpolation
+>>> from OpenHA.processing.preprocess import interpolation
 >>> import numpy as np
 
 >>> x = np.array([0, 1, 2, 3])
@@ -49,7 +49,7 @@ The interpolation method is specified by the parameter `kind`.
 ---
 
 ```python
->>> from OpenHA.manipulation.preprocess import interpolation
+>>> from OpenHA.processing.preprocess import interpolation
 >>> import numpy as np
 
 >>> x = np.array([0, 1, 2, 3])

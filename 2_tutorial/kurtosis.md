@@ -38,7 +38,7 @@ $$
 ## Examples
 
 ```python
->>> from OpenHA.manipulation.feature import kurtosis
+>>> from OpenHA.processing.feature import kurtosis
 >>> import numpy as np
 
 # normal distribution

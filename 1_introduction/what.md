@@ -6,7 +6,7 @@ OpenHA（Open Health Assessment）是一套简易上手的开关健康评估框�
 
 ## 设计思想
 
-关于OpenHA，其整体结构与设计思路参考了文章《面向复杂系统健康评估的若干思考》中的分析和设计，其开发和维护工作由北航可靠飞行控制研究组（后文简称[rflylab](http://rfly.buaa.edu.cn/)）负责。具体来说，文献中介绍了复杂系统健康评估的研究现状，并在此基础上提出了一种面向复杂系统的健康评估框架，该框架包含**数据获取（Data Acquisition）**、**数据处理（Data Manipulation）**、**健康评估(Health Assessment)**和**健康预测(Health Prognostics)**四个主要方面。以上四部分中不同方法的嵌套与组合，基本可以满足多种场景、多种对象的健康评估问题的求解需要。
+关于OpenHA，其整体结构与设计思路参考了文章《面向复杂系统健康评估的若干思考》中的分析和设计，其开发和维护工作由北航可靠飞行控制研究组（后文简称[rflylab](http://rfly.buaa.edu.cn/)）负责。具体来说，文献中介绍了复杂系统健康评估的研究现状，并在此基础上提出了一种面向复杂系统的健康评估框架，该框架包含**数据获取（Data Acquisition）**、**数据处理（Data Processing）**、**健康评估(Health Assessment)**和**健康预测(Health Prediction)**四个主要方面。以上四部分中不同方法的嵌套与组合，基本可以满足多种场景、多种对象的健康评估问题的求解需要。
 
 OpenHA为开发人员提供了若干常用的健康评估与预测方面的算法模块，用户可通过通过Python脚本直接调用各种方法，进而完成各种健康评估应用；也可以通过自定义算法模块，实现定制开发。
 
@@ -18,18 +18,18 @@ OpenHA为开发人员提供了若干常用的健康评估与预测方面的算�
 
 <!-- 逐步更新迭代中，需持续修改 -->
 
-<img src="./OpenHA.png" style="zoom: 25%;" />
+<img src="./OpenHA.svg" style="zoom: 85%;" />
 
-从上图中可以看出，该平台主要包含了核心库`core`、数据处理`manipulation`、健康评估`assessment`、健康预测`prognostics`、数据集`datasets`以及演示实例`examples`共六个主要模块，具体各模块的说明如下所示：
+从上图中可以看出，该平台主要包含了核心库`core`、数据处理`processing`、健康评估`assessment`、健康预测`prognostics`、数据集`datasets`以及演示教程`tutorials`共六个主要模块，具体各模块的说明如下所示：
 
-1. `core`，核心库，其中包含一些数据结构的定义、异常处理相关的类与方法，以及一些基本公共方法；
-1. `manipulation`，包含预处理`preprocessing`以及特征提取`feature`两个子模块。
+1. `core`，核心库，其中包含一些数据结构的定义、异常处理相关的类与方法，以及一些基本方法；
+1. `processing`，包含预处理`preprocessing`以及特征提取`feature`两个子模块。
     1. 数据预处理包括离群点和异常点检测、对齐、补齐、去噪等方法。
     1. 特征提取包括各种统计特征，或频域特征提取的常用方法。
 1. `assessment`，健康评估模块，包含了属性评估`attribute`以及系统评估`system`两个子模块，囊括了一些可用的健康评估方法。
-1. `prognostics`，健康预测模块，基于统计模型或数据驱动的一些预测方法；其中基于模型的预测方法引用了第三方开源库[The NASA Prognostics Python Packages](https://nasa.github.io/progpy)，即 ProgPy，用户可在其网站页面查看该库的使用方法。
+1. `prognostics`，健康预测模块，基于统计模型或数据驱动的一些预测方法；其中基于模型的预测方法引用了第三方开源库[The NASA Prognostics Python Packages](https://nasa.github.io/progpy)，即ProgPy，用户可在其网站页面查看该库的使用方法。
 1. `datasets`，包含一些可用于健康评估算法开发、验证的样例数据。
-1. `examples`，一些健康评估的演示示例。
+1. `tutorials`，一些有关健康评估的演示教程。
 
 ## 核心特性
 
