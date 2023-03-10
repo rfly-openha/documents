@@ -15,6 +15,46 @@ This form of importing submodules is preferred for all submodules.
 
 In some cases, the public API is one level deeper. For example, the `OpenHA.assessment.attribute` module is public, and the functions it contains are not available in the `OpenHA.assessment` namespace. Sometimes it may result in more easily understandable code if functions are imported from one level deeper.
 
+## Dependencies
+
+The OpenHA is aimed to be an open source framework to help users from various fields to build their own PHM applications.
+However, objectively, the focus of our research is mainly concentrated on multicopters.
+Most of the functions included in this package are based on our research achievements, which are appliable for multicopters.
+The proposed algorithms or theories have been published and the papers are available on the [official homepage](http://rfly.buaa.edu.cn/index.html#/publications).
+That is the best we can do so far.
+So you are welcome to join us to develop your new health assessment algorithms for other platforms including multicopters, such as planes, ships, vehicles, etc.
+
+On the other hand, some other excellent packages and open-source projects are depended on by OpenHA to avoid reinventing the wheel.
+These packages provide have been optimized by experienced engineers or programmers.
+We don't have the reason or motivation to reinvent the wheel since they have provided us with powerful tools to process data.
+Some of the most commonly used packages are introduced as follows.
+
+- [NumPy](https://numpy.org/). NumPy is the fundamental package for scientific computing in Python. It contains lots of classes and functions that you may need in scientific computing and it's also the foundation of many other packages. If you don't know it, go to learn it first.
+By the way, importing this package in the following way is recommended.
+
+```python
+import numpy as np
+```
+
+- [SciPy](https://scipy.org/). SciPy is a collection of mathematical algorithms and convenience functions built on the [Numpy](https://numpy.org/) extension of Python. It adds significant power to the interactive Python session by providing the user with high-level commands and classes for manipulating and visualizing data. With SciPy, an interactive Python session becomes a data-processing and system-prototyping environment rivaling systems, such as MATLAB, IDL, Octave, R-Lab, and SciLab.
+
+- [matplotlib](https://matplotlib.org/). Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. We may develop more top-level functions to make it more convenient to visualize your assessment results in the future.
+Anyway, matplotlib is always the first choice if you want to plot a variable in Python.
+By the way, it is recommended to use the following magic command to make it interactive in Jupyter Notebook.
+
+```python
+%matplotlib widget # or `%matplotlib ipympl` alternatively
+import matplotlib.pyplot as plt
+```
+
+- [scikit-learn](https://scikit-learn.org/stable/index.html). Scikit-learn is an open source machine learning library that supports supervised and unsupervised learning. It also provides various tools for model fitting, data preprocessing, model selection, model evaluation, and many other utilities.
+
+- [ProgPy](https://nasa.github.io/progpy/index.html). The NASA Prognostics Python Packages (ProgPy) are a set of open-sourced python packages supporting research and development of prognostics and health management tools. They implement architectures and common functionality of prognostics, supporting researchers and practitioners.
+ProgPy consists of a set of packages. See the documentation specific to each package for more information.
+
+Once again, if some algorithms are unavailable in the above packages or projects, you are welcome to report an issue in GitHub to let us know, or you can implement it and create a Pull Request.
+We will check it as soon as possible.
+
 ## API definition
 
 There is a table of all the submodules and functions defined in OpenHA.
