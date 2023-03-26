@@ -48,3 +48,9 @@ $\sigma$ is the unbiased estimate of the standard deviation.
 `x` —— A N-D array of observations.
 
 For an n-by-m array, it indicates `n` observations with `m` features.
+
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `x`           |      No      |          Input port           |

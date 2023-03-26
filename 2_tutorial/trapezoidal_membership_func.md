@@ -53,3 +53,10 @@ $$
 ---
 
 `x` —— System states, specified as an array of numeric scalars of vectors.
+
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|        `params`        |      No      |            Dialog             |
+|          `x`           |      No      |          Input port           |

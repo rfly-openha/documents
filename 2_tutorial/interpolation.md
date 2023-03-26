@@ -87,3 +87,12 @@ The interpolation method is specified by the parameter `kind`.
 - `nearest-up` and `nearest` differ when interpolating half-integers (e.g., 0.5, 1.5) in that `nearest-up` rounds up and `nearest` rounds down.
 
 The default is `linear`.
+
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `x`           |      No      |          Input port           |
+|          `y`           |      No      |          Input port           |
+|        `x_est`         |      No      |          Input port           |
+|         `kind`         |     Yes      |            Dialog             |

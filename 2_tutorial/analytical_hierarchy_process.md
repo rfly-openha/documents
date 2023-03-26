@@ -80,6 +80,13 @@ $$
 A\Rightarrow\left[\begin{matrix}\frac{a_1}{a_1+a_3}&\frac{a_2}{a_2+a_4}\\ \frac{a_3}{a_1+a_3}&\frac{a_4}{a_2+a_4}\end{matrix}\right]\Rightarrow\left[\begin{matrix}\frac{1}{2}\left(\frac{a_1}{a_1+a_3}+\frac{a_2}{a_2+a_4}\right)\\ \frac{1}{2}\left(\frac{a_3}{a_1+a_3}+\frac{a_4}{a_2+a_4}\right)\end{matrix}\right]
 $$
 
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `A`           |      No      |            Dialog             |
+|        `method`        |     Yes      |            Dialog             |
+
 ## Output Arguments
 
 A tuple `(W, CI, CR)`, where `W` is the weight vector of length `n`, `CI` is the Consistency Index, and `CR` is the Consistency Ratio.

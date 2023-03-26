@@ -105,6 +105,15 @@ Details of the proof and other details can be found in the original literature.
 
 `Sw` —— Covariance matrix of disturbance vectors, specified as an l-by-l square matrix.
 
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `A`           |      No      |          Input port           |
+|          `B`           |      No      |          Input port           |
+|          `D`           |      No      |          Input port           |
+|          `Sw`          |      No      |          Input port           |
+
 ## References
 
 [1] O. Kang, Y. Park, Y. S. Park, M. Suh, "New measure representing degree of controllability for disturbance rejection," Journal of Guidance, Control, and Dynamics, vol. 32, no. 5, pp. 1658-1661, 2009. DOI: 10.2514/1.43864.

@@ -78,6 +78,15 @@ The values of `fmin` should be no more than `fmax`.
 
 `G` —— An point in $\Omega$, specified as a 1-D array of length `n`.
 
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `bf`          |      No      |          Input port           |
+|         `fmax`         |      No      |          Input port           |
+|         `fmin`         |      No      |          Input port           |
+|          `G`           |      No      |          Input port           |
+
 ## References
 
 [1] G.-X. Du, Q. Quan, B. Yang, and K.-Y. Cai, "Controllability Analysis for Multirotor Helicopter Rotor Degradation and Failure," Journal of Guidance, Control, and Dynamics, vol. 38, no. 5, pp. 978-984, 2015. DOI: 10.2514/1.G000731.

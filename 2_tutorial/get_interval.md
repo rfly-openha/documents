@@ -50,3 +50,12 @@ s = get_interval(left, right, l_closed, r_closed)
 ---
 
 `r_closed` —— `True` or `False`, whether the right side of the interval is closed. Default is `False`.
+
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|         `left`         |      No      |            Dialog             |
+|        `right`         |      No      |            Dialog             |
+|       `l_closed`       |      No      |            Dialog             |
+|       `r_closed`       |      No      |            Dialog             |

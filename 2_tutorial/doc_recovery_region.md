@@ -90,6 +90,16 @@ See [acai](./acai.html/#input-arguments) for more information.
 
 `dt=T/N` is the sample time.
 
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `A`           |      No      |          Input port           |
+|          `B`           |      No      |          Input port           |
+|          `U`           |      No      |          Input port           |
+|          `T`           |      No      |          Input port           |
+|          `N`           |      No      |          Input port           |
+
 ## References
 
 [1] B Yang, G.-X. Du, Q. Quan, K.-Y. Cai, "The Degree of Controllability with Limited Input and an Application for Hexacopter Design," in Proceedings of the 32nd Chinese Control Conference. Xi'an, Shaanxi, China, 2013.

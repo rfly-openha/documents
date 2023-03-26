@@ -55,6 +55,12 @@ $$
 
 For an n-by-m array, it indicates `n` observations with `m` features.
 
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `x`           |      No      |          Input port           |
+
 ## References
 
 [1] "Measures of Skewness and Kurtosis," Online, https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm.

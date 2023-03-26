@@ -96,6 +96,13 @@ Significantly, this function is only for LTI systems.
 
 `B` —— Input coefficient matrix of the state-space model of an LIT system, specified as an n-by-p matrix.
 
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `A`           |      No      |          Input port           |
+|          `B`           |      No      |          Input port           |
+
 ## Output Arguments
 
 A tuple `(rho1, rho2, rho3)`, whose physical meanings are introduced above.

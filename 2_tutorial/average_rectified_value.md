@@ -40,3 +40,9 @@ where $x_i,i=1,2,\cdots,n$ represents the $i$-th observed value.
 ## Input Arguments
 
 `x` —— A 1-D array of observations of length `n`, namely `n` observations of a quantity.
+
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `x`           |      No      |          Input port           |

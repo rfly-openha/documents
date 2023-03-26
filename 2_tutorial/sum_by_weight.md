@@ -50,3 +50,12 @@ $$
 ---
 
 `elements` —— Array of values of all the elements, specified as an array of length `n`.
+
+
+
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|       `weights`        |      No      |          Input port           |
+|       `elements`       |      No      |          Input port           |

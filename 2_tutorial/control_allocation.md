@@ -124,6 +124,19 @@ Correspondingly, the first row of the original 4-by-n matrix will be removed.
 The yaw control of the aircraft will be given up if it's `True`.
 Correspondingly, the fourth row of the original 4-by-n matrix will be removed.
 
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `n`           |      No      |            Dialog             |
+|          `d`           |      No      |            Dialog             |
+|          `ku`          |      No      |          Input port           |
+|      `init_angle`      |     Yes      |            Dialog             |
+|         `drct`         |     Yes      |            Dialog             |
+|         `eta`          |     Yes      |            Dialog             |
+|    `giveup_height`     |     Yes      |            Dialog             |
+|      `giveup_yaw`      |     Yes      |            Dialog             |
+
 ## References
 
 [1] Q. Quan. Introduction to Multicopter Design and Control. Singapore: Springer, 2017.

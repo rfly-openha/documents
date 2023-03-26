@@ -54,3 +54,10 @@ For an n-by-m array, it indicates `n` observations with `m` features.
 ---
 
 `k` —— Order of raw moment, specified as a positive integer scalar.
+
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `x`           |      No      |          Input port           |
+|          `k`           |      No      |            Dialog             |

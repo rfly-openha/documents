@@ -73,6 +73,14 @@ The proportion of the dataset `X` to include in the train split `X1` is specifie
 
 `percent` —— The proportion of the dataset `X` to include in the train split `X1`, specified as a positive float number in $\left[0,1\right]$.
 
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `X`           |      No      |          Input port           |
+|          `Y`           |      No      |          Input port           |
+|       `percent`        |     Yes      |            Dialog             |
+
 ## Output Arguments
 
 A tuple `(X1, Y1, X2, Y2)`.

@@ -36,6 +36,13 @@ And the LOF is an algorithm used for outlier detection, which is proposed by Bre
 
 `k` —— Number of neighbors for k-distance and k-neighbors, specified as a positive integer scalar.
 
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|        `points`        |      No      |          Input port           |
+|          `k`           |      No      |            Dialog             |
+
 ## References
 
 [1] M. M. Breunig, H.-P. Kriegel, R. T, Y. Ng, J. Sander. "LOF: Identifying Density-Based Local Outliers." Proceedings of the 2000 ACM SIGMOD International Conference on Management of Data, 2000, pp. 93–104. DOI: 10.1145/342009.335388.

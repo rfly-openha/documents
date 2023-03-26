@@ -64,7 +64,12 @@ Otherwise, its an array of the degree of membership of system states.
 The membership function represents the degree of membership between an element and a set.
 In fuzzy mathematics, the degree of membership is in $[0,1]$.
 
----
+## Properties of Arguments
+
+| Name of the parameters | Is optional? | Source, dialog or input port? |
+| :--------------------: | :----------: | :---------------------------: |
+|          `s`           |      No      |          Input port           |
+|          `f`           |      No      |            Dialog             |
 
 ## References
 
