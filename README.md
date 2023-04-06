@@ -10,7 +10,7 @@
 - Development
     1. Contribution Information
     1. [Style Guidance](./3_developer/style.html)
-    1. [How to contribute?](./3_developer/how_to_contribute.html)
+    1. [How to Contribute?](./3_developer/how_to_contribute.html)
     1. Planning
 - Resources
     1. Datasets

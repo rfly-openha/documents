@@ -1,23 +1,30 @@
-# 自定义API函数开发
+# Custom API Development
 
-作为一个开源健康评估框架，我们有志于将该平台打造为开放、共享、互利的开源社区，也欢迎各位志同道合的朋友和伙伴们加入到该框架的开发和维护工作中来，也感谢各位无私的贡献。
+As an open-source health assessment framework, we strive to build this platform into an open, sharing, and mutually beneficial community.
+We welcome like-minded friends and partners to join in the development and maintenance of this framework, and we appreciate your selfless contributions.
 
-在此，本文将对函数开发与贡献过程中的一些注意事项进行解释说明，请各位贡献者仔细阅读。
+Here, we will explain and clarify some points of attention in the process of development and contribution.
+We urge contributors to read carefully.
 
-## 找准定位和目标
+## Identify Position and Goals
 
-如[架构](../1_introduction/what.html#架构)中介绍，根据综述文章的总结与结论，该框架中包含了核心库、数据处理、健康评估（包括健康属性评估和系统健康评估）、健康预测等主要部分。因此贡献者在开发贡献自定义代码前，需根据函数的功能、目的找准其最佳分类。
+As introduced in the [Architecture](../1_introduction/what.html#structure), this framework includes core libraries, data processing, health assessment (including health attribute assessment and system health assessment), and health prediction modules.
+Therefore, contributors should identify the best classification of their custom functions based on the function and purpose of them.
 
-## 规范编程
+## Programming
 
-当前框架基于Python语言。在开发过程中，应当遵守一定的准则和规范，便于用户理解以及其他代码贡献者的阅读和理解。为此我们参考了其他一些开源软件的编码规范，制定了一些基本的开发规范和守则，各位贡献者可前往查看`代码贡献指南`与[代码规范](./style.html)了解更多详细内容。
+The current framework is based on the Python language.
+In the development process, certain guidelines and standards should be followed to facilitate user understanding and the reading and understanding of other code contributors.
+For this purpose, we have referenced the coding standards of other open-source software and formulated some basic development rules and guidelines.
+Contributors can refer to the `Code Contribution Guide` and [Code Style](./style.html) to learn more.
 
-## 完善文档和示例
+## Documentation and Examples
 
-在代码功能完善的基础上，各位贡献者也应对应完善该函数的说明文档和必要的简单示例，以便用户查阅。
+Contributors should also improve the documentation and necessary simple examples of the function to facilitate user reference.
 
-在函数注释清晰明白的基础上，丰富与完善文档是一件相对轻松和简单的事情。关于文档格式，可以参考[模板](../2_tutorial/template_of_document.html)，该文档名应与函数或类名保持一致，放置于路径`/2_tutorial/`目录下。
+On the basis of clear and understandable function comments, enriching and improving the documentation is a relatively easy and simple task.
+For the format, you can refer to the [template](../2_tutorial/template_of_document.html), and the file name should be consistent with the function or class name and place it in the `/2_tutorial/` directory.
 
-## 推送规范
+## Push
 
-关于更多代码推送审核要求，请参考`代码贡献指南`部分对应内容。
+For more information on push request, please refer to the corresponding content in the `Code Contribution Guide` section.

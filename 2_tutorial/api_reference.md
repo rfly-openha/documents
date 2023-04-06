@@ -95,6 +95,10 @@ All the documentations are available via the links.
 | functions                                                           | description                                                                      |
 | ------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | [analytical_hierarchy_process](./analytical_hierarchy_process.html) | Computes the weight of each element according to pairwise comparison matrix `A`. |
+| [gate_and](./gate_and.html)                                         | Calculates probability of an "AND" gate.                                         |
+| [gate_not](./gate_not.html)                                         | Calculates probability of a "NOT" gate.                                          |
+| [gate_or](./gate_or.html)                                           | Calculates probability of an "OR" gate.                                          |
+| [gate_xor](./gate_xor.html)                                         | Calculates probability of a "XOR" gate.                                          |
 | [sum_by_weight](./sum_by_weight.html)                               | Calculates the weighted sum.                                                     |
 
 ### `OpenHA.processing.feature`

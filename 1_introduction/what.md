@@ -1,40 +1,67 @@
-# 什么是OpenHA
+# What is the OpenHA
 
-## OpenHA简介
+## Introduction to OpenHA
 
-OpenHA（Open Health Assessment）是一套简易上手的开关健康评估框架，其提供了一系列工具与方法，旨在帮助用户简单、快捷地搭建与实现各种健康评估应用。
+The OpenHA (Open Health Assessment) is an easy-to-use and open health assessment framework consisting of various tools and methods.
+The framework is designed to make it easier and quicker for users to build and implement their own health assessment applications.
 
-## 设计思想
+## Design
 
-关于OpenHA，其整体结构与设计思路参考了文章《面向复杂系统健康评估的若干思考》中的分析和设计，其开发和维护工作由北航可靠飞行控制研究组（后文简称[rflylab](http://rfly.buaa.edu.cn/)）负责。具体来说，文献中介绍了复杂系统健康评估的研究现状，并在此基础上提出了一种面向复杂系统的健康评估框架，该框架包含**数据获取（Data Acquisition）**、**数据处理（Data Processing）**、**健康评估(Health Assessment)**和**健康预测(Health Prediction)**四个主要方面。以上四部分中不同方法的嵌套与组合，基本可以满足多种场景、多种对象的健康评估问题的求解需要。
+The OpenHA is developed according to the paper "Speculative Views on Health Assessment of Complex Systems".
+This paper outlines the current research status of health assessment for complex systems.
+The framework involves four main aspects: data acquisition, data processing, health assessment, and health prediction
+The effective integration of various methods in these four aspects enables OpenHA to address diverse health assessment challenges posed by different scenarios and objects.
+Currently, the development and maintenance is carried out by the Reliable Flight Control Research Group of Beihang University (hereinafter referred to as ["rflylab"](http://rfly.buaa.edu.cn)).
 
-OpenHA为开发人员提供了若干常用的健康评估与预测方面的算法模块，用户可通过通过Python脚本直接调用各种方法，进而完成各种健康评估应用；也可以通过自定义算法模块，实现定制开发。
+OpenHA provides developers with a range of common modules for health assessment and prediction.
+Users can directly call these methods via Python scripts to accomplish various health assessment applications.
+Additionally, users can develop their own custom modules.
 
-此外，为降低其上手和使用门槛，方便更多、更广大用户的使用，我们也开发了面向OpenHA的**辅助计算支持软件**，希望可以吸引更多用户加入到OpenHA的使用、贡献与维护工作中来。
+Additionally, to reduce the barrier to entry and facilitate wider usage, we have developed an computing support software specifically for OpenHA.
+Our hope is that this software will invite more users to join in the usage, contribution, and maintenance of OpenHA.
 
-## 架构
+## Structure
 
-该框架的架构参考了上述综述文章归纳整理的设计方案，具体到开发实现阶段，该平台的具体结构如下图所示。
+The Structure of the framework is based on the design scheme summarized and organized in the aforementioned survey.
+During the development and implementation phases, the specific structure of the framework is shown in the following figire.
 
 <!-- 逐步更新迭代中，需持续修改 -->
 
 <img src="./OpenHA.svg" style="zoom: 85%;" />
 
-从上图中可以看出，该平台主要包含了核心库`core`、数据处理`processing`、健康评估`assessment`、健康预测`prognostics`、数据集`datasets`以及演示教程`tutorials`共六个主要模块，具体各模块的说明如下所示：
+From the above figure, it can be seen that the framework mainly includes six major modules: `core`, `processing`, `assessment`, `prognostics`, `datasets`, and `tutorials`. The specific descriptions of each module are as follows:
 
-1. `core`，核心库，其中包含一些数据结构的定义、异常处理相关的类与方法，以及一些基本方法；
-1. `processing`，包含预处理`preprocessing`以及特征提取`feature`两个子模块。
-    1. 数据预处理包括离群点和异常点检测、对齐、补齐、去噪等方法。
-    1. 特征提取包括各种统计特征，或频域特征提取的常用方法。
-1. `assessment`，健康评估模块，包含了属性评估`attribute`以及系统评估`system`两个子模块，囊括了一些可用的健康评估方法。
-1. `prognostics`，健康预测模块，基于统计模型或数据驱动的一些预测方法；其中基于模型的预测方法引用了第三方开源库[The NASA Prognostics Python Packages](https://nasa.github.io/progpy)，即ProgPy，用户可在其网站页面查看该库的使用方法。
-1. `datasets`，包含一些可用于健康评估算法开发、验证的样例数据。
-1. `tutorials`，一些有关健康评估的演示教程。
+1. `core` - the core library, which includes definitions of some data structures, classes and methods for exception handling, and other basic methods.
+2. `processing` - including two submodules: `preprocessing` and `feature`.
+   1. `preprocessing` includes methods such as outlier and anomaly detection, resampling, and denoising.
+   2. `feature` includes commonly used methods for various statistical features and frequency domain feature extraction.
+3. `assessment` - the health assessment module, including two submodules: `attribute` and `system`, which encompass some available health assessment methods.
+4. `prognostics` - the health prognostics module, which is based on statistical models or data-driven prediction methods. The model-based prediction method refers to the third-party open-source library [The NASA Prognostics Python Packages](https://nasa.github.io/progpy), or ProgPy.
+5. `datasets` - including some datasets that can be used for the development and validation of health assessment algorithms.
+6. `tutorials` - some demonstration tutorials related to health assessment.
 
-## 核心特性
+## Key Properties
 
-<!-- 待补充完善 -->
+The properties of this framework are primarily reflected in its "flexibility" and "shareability".
 
-## 开发贡献说明
+- **Flexibility**
 
-当前框架基于Python语言。在开发过程中，应当遵守一定的准则和规范，便于用户理解以及其他代码贡献者的阅读和理解。为此，我们参考了其他一些开源软件的编码规范，制定了一些基本的开发规范和守则，各位贡献者可前往查看[开发者文档](../index.html#开发者文档)了解更多详细内容。
+As previously mentioned, OpenHA offers various methods to solve the health assessment effectively needs for multiple scenarios and objects.
+In other words, compared to "framework", OpenHA is more like a "library" or "package".
+Nonetheless, it's advised that users organize their health assessment applications according to the architecture and flowchart in that paper since having a unified structure benefits inter-method comparisons and lowers the learning curve for new users.
+
+- **Shareability**
+
+As implied by its name, OpenHA is entirely open-source under the XXX open-source license.
+As an open community, this platform hopes to attract developers who will contribute to its development, upgrading, and maintenance and encourage users to adopt it as their primary choice for building health assessment applications.
+Additionally, users can contribute their health assessment methods to the platform, making it easier for others to access their research results and avoid reinventing the wheel.
+
+On the other hand, data sharing also embodies this platform's shareability, where the RflyMAD dataset will be freely available, just like the platform itself.
+Users are encouraged to contribute and share their research achievements, methods, or datasets while using OpenHA.
+
+## How to Contribute
+
+Our current framework uses Python language.
+We recommend adhering to specific guidelines and standards during development, making it easier for other contributors to read and understand the codebase's content.
+To this end, we have consulted the coding standards of other open-source software and formulated some basic development rules and guidelines.
+For further details, visit our [developer documentation](../README.html) page.
