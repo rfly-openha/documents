@@ -107,8 +107,7 @@ $$
 $$
 
 where $c_\text{T},k_{\mu}$ is modeled as a constant that can be easily determined by experiments.
-\where Mi is the reaction torque of the ith propeller acting on the fuselage, cM =1/4π 2 · ρDp5CM
-can also be determined by experiments. The parameters ρ, Dp, CT, CM are presented in Sect. 4.2.1 in
+$M_i$ is the reaction torque of the $i$th propeller.
 
 ## Parameters
 
