@@ -78,7 +78,7 @@ The parameter `A` and `B` are the state matrix and input matrix of the state-spa
 ---
 
 `U` —— The minimum and maximum values of the control inputs, specified as a tuple `(fmin, fax)`.
-See [acai](./acai.html/#input-arguments) for more information.
+See [acai](./acai.html#input-arguments) for more information.
 
 ---
 

@@ -4,7 +4,7 @@
     1. [What is the OpenHA?](./1_introduction/what.html)
     1. Quick Start
 - User Guidance
-    1. Downloads and Installation
+    1. [Downloads and Installation](./2_tutorial/download.html)
     1. [API Reference](./2_tutorial/api_reference.html)
     1. Tutorials
 - Development
