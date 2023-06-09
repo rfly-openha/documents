@@ -6,7 +6,7 @@
 - User Guidance
     1. [Downloads and Installation](./2_tutorial/download.html)
     1. [API Reference](./2_tutorial/api_reference.html)
-    1. Tutorials
+    1. [Tutorials](./2_tutorial/examples/tutorial.html)
 - Development
     1. Contribution Information
     1. [Style Guidance](./3_developer/style.html)
