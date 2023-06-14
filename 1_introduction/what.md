@@ -17,7 +17,7 @@ OpenHA provides developers with a range of common modules for health assessment 
 Users can directly call these methods via Python scripts to accomplish various health assessment applications.
 Additionally, users can develop their own custom modules.
 
-Additionally, to reduce the barrier to entry and facilitate wider usage, we have developed an computing support software specifically for OpenHA.
+Additionally, to reduce the barrier to entry and facilitate wider usage, we have developed a visual computing tool specifically for OpenHA.
 Our hope is that this software will invite more users to join in the usage, contribution, and maintenance of OpenHA.
 
 ## Structure

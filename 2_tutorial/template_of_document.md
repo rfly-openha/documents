@@ -123,7 +123,7 @@ The procedure is shown as follows.
 1. Download the [theme "Vue"](https://theme.typoraio.cn/theme/Vue/) and install it with the help of this [guide](https://support.typora.io/About-Themes/).
 1. Download and install the [Pandoc](https://www.pandoc.org/).
 1. Open this file in Typora and then export it in the format of `HTML`.
-1. Save it to `/2_tutorial/` and modify `index.html` correspondingly.
+1. Save it to `/2_tutorial/` and modify `README.md` correspondingly. Attention that you also need to convert the modified `README.md` to the `./docs/index.html`.
 
 ## References
 

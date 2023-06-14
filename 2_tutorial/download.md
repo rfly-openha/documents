@@ -23,3 +23,11 @@ git clone https://github.com/rfly-openha/OpenHA
 cd OpenHA
 pip install -e .
 ```
+
+## The Visual Computing Tool of OpenHA
+
+This software is now available online via the following url: http://open.kappbk.com/
+
+This online tool is not finished yet and more time will be needed to make it more powerful and useful.
+And a standalone version will be released in the future.
+More details will be introduced then on this page.
