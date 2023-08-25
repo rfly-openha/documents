@@ -15,7 +15,7 @@
     1. [How to Contribute?](./3_developer/how_to_contribute.html)
     1. [Planning](./3_developer/planning.html)
 - Resources
-    1. Datasets
+    1. [Datasets](./4_resources/dataset.html)
     1. [Models](./4_resources/multicopter.html)
 - Downloads and Support
 
