@@ -19,25 +19,28 @@ Note: The physical parameters of multicopter dynamic model uesd in SIL simulatio
 
 ### Broad Fault Types
 There are 11 fault types in RflyMAD dataset, covering the actuators, sensors of the multicopter and environmental effects. The exact cases in each fault type are listed in the following table.
-|Type of Faults     |SIL Simulation|HIL Simulation|Real Flight|
-|-------------------|--------------|--------------|-----------|
-|Motor(1-4)         |921           |921           |231        |
-|Propeller(1-4)     |435           |435           |$\times$   |
-|Low Voltage        |20            |20            |$\times$   |
-|Wind Affect        |150           |150           |$\times$   |
-|Load Lose          |150           |150           |$\times$   |
-|Sensors' Noise     |50            |50            |82         |
-|Accelerometer      |128           |128           |20         |
-|Gyroscope          |128           |128           |20         |
-|Magnetometer       |128           |128           |20         |
-|Barometer          |128           |128           |20         |
-|GPS                |128           |128           |20         |
-|No Fault           |200           |200           |84         |
-|Total              |2566          |2566          |497        |
+| Type of Faults | SIL Simulation | HIL Simulation | Real Flight |
+| -------------- | -------------- | -------------- | ----------- |
+| Motor(1-4)     | 921            | 921            | 231         |
+| Propeller(1-4) | 435            | 435            | $\times$    |
+| Low Voltage    | 20             | 20             | $\times$    |
+| Wind Affect    | 150            | 150            | $\times$    |
+| Load Lose      | 150            | 150            | $\times$    |
+| Sensors' Noise | 50             | 50             | 82          |
+| Accelerometer  | 128            | 128            | 20          |
+| Gyroscope      | 128            | 128            | 20          |
+| Magnetometer   | 128            | 128            | 20          |
+| Barometer      | 128            | 128            | 20          |
+| GPS            | 128            | 128            | 20          |
+| No Fault       | 200            | 200            | 84          |
+| Total          | 2566           | 2566           | 497         |
+
 Note: $\times$ represents this item does not exist in sub-dataset and the number means the amount of corrresponding cases. 
+
 Motor(1-4) represents the number of fail motors is in range of 1 to 4.
 
 ### Sufficient Flight Statuses
+
 The following table lists all 6 flight statuses in this dataset. 
 |Flight status      |SIL Simulation|HIL Simulation|Real Flight|
 |-------------------|--------------|--------------|-----------|
@@ -47,6 +50,7 @@ The following table lists all 6 flight statuses in this dataset.
 |Circling           |$\surd$       |$\surd$       |$\surd$    |
 |Acceleration       |$\surd$       |$\surd$       |$\surd$    |
 |Deceleration       |$\surd$       |$\surd$       |$\times$   |
+
 Note: $\surd$ represents this item exists in sub-dataset and $\times$ represents not.
 
 ### Exact Data in One Flight Case
@@ -96,8 +100,6 @@ The Dataset is restored in ,
 If you have problems to download the dataset from the above `Link`, you can also download them in [YunPan]().
 
 ## Quick Use
-
-
 ## Samples
 
 
