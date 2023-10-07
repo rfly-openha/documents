@@ -1,24 +1,24 @@
 # RflyMAD: A Dataset for Multicopter Fault Detection and Health Assessment
 
-This site presents the RflyMAD dataset which is used for multicopter fault detection and health assessment. The dataset is collected from RflySim platform and real flight by Beihang Reliable Flight Control Group (Rfly). There are 5500 flight cases in total in the dataset, 2500 for software-in-the-loop (SIL) simulatin, 2500 for hardware-in-the-loop (HIL) simulation and 497 for real flight. The dataset includes 11 types of common faults under 6 flight statuses to cover more occasions in which the multicopters have different mobility levels when faults occur.
+This site presents the **RflyMAD dataset** which is used for multicopter fault detection and isolation (FDI) or health assessment (HA). The dataset is collected from RflySim platform and real flight by Beihang Reliable Flight Control Group (Rfly). There are **5629 flight cases** in total in the dataset, **2566** for software-in-the-loop (SIL) simulatin, **2566** for hardware-in-the-loop (HIL) simulation and **497** for real flight. The dataset includes **11 types of common faults** under **6 flight statuses** to cover more occasions in which the multicopters have different mobility levels when faults occur.
 
-## What is RflyMAD?
-Different from research fields like computer vision, batteries, and mechanical vibration, there are relatively few publicly datasets related to the FDI problem and  health assessment of aircraft systems. Regarding the lack of fault dataset, we form RflyMAD dataset. It contains both simulation and real flight data, and covers sufficient fault types and flight statuses, ensuring both quantity and quality.
+## 1. What is RflyMAD?
+Different from research fields like computer vision, batteries, and mechanical vibration, there are relatively few publicly datasets related to the FDI, PHM and HA problems of aircraft systems. Regarding the lack of fault dataset, we form RflyMAD dataset. The RflyMAD dataset contains both simulation and real flight data, and covers sufficient fault types and flight statuses, ensuring both quantity and quality.
 
 The hierarchy of RflyMAD dataset is shown in the following figure.
 <img src="./hierarchy.png" style="zoom: 55%;" />
 
-Note: In `Real Flight Data`, there are extra velocity and direction of wind data recorded in the experiments.
+Note: In `Real Flight Data`, there are extra **wind data** about velocity and direction at the experiment time recorded in the dataset.
 
-### Varied Multicopters
+### 1.1 Varied Multicopters
 <img src="./plane_droneyee.png" style="zoom: 35%;" />
 
 In real flight experiments, in order to enhance the generalization of the dataset, three multicopters with different diagonal sizes are used to collect data. They are Droneyee X200 (Diagonal size of 200mm, 1.054kg), Droneyee X450 (Diagonal size of 450mm, 2.084kg) and Droneyee X680 (Diagonal size of 680mm, 4.068kg).
 
-Note: The physical parameters of multicopter dynamic model uesd in SIL simulation data and HIL simulation data are achieved from Droneyee X450, including weights, Moment of Inertia and motor parameters.
+Note: The physical parameters of multicopter dynamic model uesd in SIL simulation and HIL simulation are achieved from Droneyee X450, including weights, moment of inertia and motor parameters.
 
-### Broad Fault Types
-There are 11 fault types in RflyMAD dataset, covering the actuators, sensors of the multicopter and environmental effects. The exact cases in each fault type are listed in the following table.
+### 1.2 Broad Fault Types
+There are 11 fault types in RflyMAD dataset, including actuators, sensors of the multicopter and environmental effects. The exact cases in each fault type are listed in the following table.
 
 | Type of Faults | SIL Simulation | HIL Simulation | Real Flight |
 | -------------- | -------------- | -------------- | ----------- |
@@ -40,7 +40,7 @@ Note: $\times$ represents this item does not exist in sub-dataset and the number
 
 Motor(1-4) represents the number of failure motors is in range of 1 to 4.
 
-### Sufficient Flight Statuses
+### 1.3 Sufficient Flight Statuses
 
 The following table lists all 6 flight statuses in this dataset. 
 
@@ -55,28 +55,39 @@ The following table lists all 6 flight statuses in this dataset.
 
 Note: $\surd$ represents this item exists in sub-dataset and $\times$ represents not.
 
-### Exact Data in One Flight Case
+### 1.4 Exact Data in One Flight Case
 
 As shown in the figure of dataset hierarchy, each flight within the dataset contains four types of raw data and their processed files, and they could be described as follows:
 - `Flight information`: It contains the flight command (e.g., take off, land and move to a target position), fault types and fault parameters.
 - `ULog`: PX4 uses it to log uORB topics as messages, including device inputs (e.g., sensors, RC inputs), internal state(e.g., attitude, EKF states), and String messages.
-- `Telemetry log`: TLog is recorded by the ground station, and the main content is the information sent and received between a multicopter and its corresponding QGC. Thus the frequency of the data is influenced by the communication quality in real flight or the performance of the simulation computer.
-- `True Data`: This data is generated by the RflySim platform during the simulation flight and recorded at a frequency of 250Hz. It contains the position and attitude information of the multicopter and motor speed.
+- `Telemetry log`: TLog is recorded by the ground station, and the main content is the information sent and received between a multicopter and its corresponding QGC. Thus frequency of transmission is decided by the communication quality in real flight or the performance of the simulation computer.
+- `Ground Truth Data`: This data is generated by the RflySim platform during the simulation and recorded at a frequency of 120Hz. It contains the kinematics information, fault states and motor speeds. This data is abbreviated as "GTData" in the following text.
 - `BAG`: The BAG file is generated by the ROS system in each real flight. It contains the position, attitude, and control commands of the multicopter.
 
-Note: It is worth noting that the `True data` only exist in simulation data and the `BAG` files only in real flight data, so there are still four types of data in each flight.
+Note: It is worth noting that the `GTData` only exists in simulation data and the `BAG` files only in real flight data, so there are still four types of data associated with each flight.
 
 
-## Citation
+## 2. Citation
 
-If you use some data from our dataset or pre-processing tools in our repositories, please cite it as:
-```bash
-@article{
-
+If you find our dataset is useful, and use our data in your research, please cite it as:
+```
+@article{LE20230928,
+	author = "Le, Xiang-Li and Jin, Bo and Cui, Gen and Dai, Xun-Hua and Quan, Quan",
+	title = "RflyMAD: A Dataset for Multicopter Fault Detection and Health Assessment",
+	journal = "",
+	volume = "",
+	pages = "",
+	year = "2023",
+	issn = "",
+	doi = "",
+	url = "",
 }
 ```
-## Downloads
-The Dataset is restored in ,
+## 3. Downloads
+Note: The files below are restored on [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AA899310083D344CB0B74D900504CDE110). If you have access to download them directly, please use this download link with a faster speed. Or if you have any problems to download the dataset from the above link, you can download them with [Baidu Pan]().
+
+Raw data and their related processed files are included in each `.rar`. 
+
 |Name          |Link    |Size   |Remark|
 |--------------|--------|-------|------|
 |SIL-Motor(1)  |[.rar]()|8.56GB |SIL Simulation data, including flight statuses like hover and circling|
@@ -99,125 +110,55 @@ The Dataset is restored in ,
 |Real-Sensors  |[.rar]()|11.76GB|Real flight data, including three diagonal size multicopters|
 |Real-No Fault |[.rar]()|5.49GB |Real flight data, including three diagonal size multicopters|
 
-If you have problems to download the dataset from the above `Link`, you can also download them in [YunPan]().
+Apart from the above formal data in RflyMAD, we also provide a sample dataset with a smaller size for users to use and check. The processed files of the sample dataset is also given in the following link. The data processing tools used to generate processed files will be introduced in [Quick Use](#quick-use).
+|Name          |Link    |Size   |Remark|
+|--------------|--------|-------|------|
+|SampleData    |[.rar](https://bhpan.buaa.edu.cn/link/AA9BCE69F3CB944158A883E06DAB72B813)|490.75MB |Sample data, including 12 flight cases in each sub-dataset, so there are 36 flight cases in total.|
+|ProcessData   |[.rar](https://bhpan.buaa.edu.cn/link/AA86A1E664D9744A038CE68C35436ACB81)|12.25MB |Processed data of `SampleData`, generated by data processing tools.|
 
-## Quick Use
+## 4. Quick Use
+After downloading the RflyMAD dataset, you'd better to reorganize the resources in the following format, just like the [hierarchy](#what-is-rflymad) mentioned before, in order to use our toolkit conveniently.
+```
+\RflyMAD dataset
+    \SIL
+        \acce <Flight status>
+            \accelerometer <Fault type>
+                ... 
+                <Exact flight cases>
+                ...
+            \barometer
+            \GPS
+            \gyroscope
+            \load_lose
+            \low_voltage
+            \magnetometer
+            \motor
+            \no_fault
+            \propeller
+            \wind_affect
+        \circling
+        \dece
+        \hover
+        \velocity
+        \waypoint
+    \HIL
+        ... <Flight status>
+    \Real
+        ... <Flight status>
+```
+And the detailed information about how to use our `data processing tools` to extract processed data from RflyMAD dataset is introduced in our [Github repository](https://github.com/lerlis/Data_processing_tools). Please check this site to learn more about our data processing tools in order to use our dataset quickly.
 
-After downloading the RflyMAD dataset, you'd better to reorganize the resources in the following format, just like the [hierarchy](#varied-multicopters) mentioned before, in order to use our toolkit conveniently.
+## 5. Samples
+Here we show two examples to diagnose faults of multicopters by using data in RflyMAD. The one is data-driven method and the other one is model-based method. On the one hand, users could learn how to use RflyMAD in their research by these two examples. And on the other hand, the support relationship between the simulation and real flight data is also be verified by the transfer learning method.
 
+### 5.1 Data-driven Method --- Transfer Learning
+The detailed methods and results can be accessed from [Supplementary experiments to verify data support ability based on transfer learning](./transfer_leanring.html).
 
+### 5.2 Model-based Method --- Kalman Filter
+In this method, we use Kalman Filter to estimate the fault conditions of one flight case in RflyMAD dataset. The detailed information about how a simplified dynamic model is established for the multicopter and how to use kalman filtering method in the process of fault diagnosis while utilizing appropriate data can be found in the [Model-based Method: Kalman Filter](./model_based_KF.html).
 
-
-
-## Samples
-Here we show two simple examples to diagnose faults of multicopters by using hover status data in RflyMAD. The one is model-based method and the other one is data-driven method.
-
-### Data-driven Method --- Transfer Learning
-
-Transfer learning is used to verify the supporting relationship between the simulation and real data in our paper. Specifically, it is realized by replacing part of the real flight data with high-quality simulation data to complete the training of the model. On the one hand, it could  
-
-From another perspective, 
-
-
-### Model-based Method --- Kalman Filter
-
-In this sample, detailed information about this fault could be seen in the following table.
-
-| Fault Type     |Fault Start Time| Duration       |Fault Parameter| Flight Status|
-| -------------- | -------------- | -------------- | ------------- | ------------ |
-| Motor(1)       | 106s           | 30s            | 0.6           | Hover        |
-| Motor(4)       | 116s           | 5s             | 0.8           | Hover        |
-| Motor(3)       | 126s           | 60s            | 0.5           | Hover        |
-
-Note: motor(i) means the $i^{th}$ motor of multicopter has a fault.
- 
-In this sample, the fault parameter could also be called the loss factor, for it represents the failure degree of a motor. If a motor's loss factor is $\eta_i\in[0,1], i = 1, 2, 3, 4$, the thrust of the $i^{th}$ motor on this multicopter is only equal to $(1 - \eta_i)\times100\%$ of thrust in normal working state. Define the thrust of the $i^{th}$ motor as $f_i$,  we could write loss factor and thrust in the froms of vector and matrix as 
-
-$$
-\begin{aligned}
-    {\mathbf f}&=[f_{1}\ f_{2}\ f_{3}\ f_{4}]^{T}, {\mathbf \Gamma}_{f}=diag(f_{1}, f_{2}, f_{3},f_{4}), \\
-    \mathbf{\eta}&=[\eta_{1}\ \eta_{2}\ \eta_{3}\ \eta_{4}]^{T}, {\mathbf \Gamma}_{\eta}=diag(\eta_{1}, \eta_{2}, \eta_{3}, \eta_{4}).
-\end{aligned}
-$$
-
-Considering the multicopter is hovering when the faults occur, we could neglect aerodynamic damping and make a small angle assumption to build a simplified function to describe the movement of the quadrotor as
-
-$$
-\begin{aligned}
-\ddot{z} & = \frac{T}{m} \\
-J_x\ddot{\phi} & = \tau_x \\
-J_y\ddot{\theta} & = \tau_y \\
-J_z\ddot{\psi} & = \tau_z
-\end{aligned}
-$$
-
-where $(x, y, z)$ and $(\phi, \theta, \psi)$ are the position and attitude of the quadrotor, $(J_x, J_y, J_z)$ are the moment of inertia. $T$ is the total force and $ (\tau_x, \tau_y, \tau_z)$ is torque generated by propellors. $m$ is the mass of the quadrotor. So the linear approximate state equation of the quadrotor aircraft system at low speed and small angle is
-
-$$
-\dot{\mathbf{x}} = \mathbf{Ax} + \mathbf{B}\underbrace{(\mathbf{u}_f - \mathbf{g})}_{\mathbf{u}} = \mathbf{Ax} + \mathbf{B}(\mathbf{B}_f\mathbf{f} - \mathbf{g})
-$$
-
-where $\mathbf{B}_f \in \mathbb{R}^{4\times4}$ is the control efficiency matrix, specific expressions of the state vector and other parameters are
-
-$$
-\begin{aligned}
-    \mathbf{x} &= [z\quad\phi\quad\theta\quad\psi\quad\dot{z}\quad \dot{\phi}\quad \dot{\theta}\quad \dot{\psi}]^{T} \in \mathbb{R}^{8},\\
-    \mathbf{u}_{f} &= [T\quad\tau_{x}\quad\tau_{y}\quad\tau_{z}]^{T} \in \mathbb{R}^{4},\\
-    \mathbf{g}&= [mg\quad0\quad0\quad0]^{T} \in \mathbb{R}^{4},\\
-    \mathbf{A}&=\left[  \begin{matrix}
-        \mathbf{0}_{4\times4} & \mathbf{I}_{4}  \\
-        \mathbf{0}_{4\times4} & \mathbf{0}_{4\times4} 
-    \end{matrix}\right] \in \mathbb{R}^{8\times8},\\
-    \mathbf{B}&= \left[  \begin{matrix}
-        \mathbf{0}_{4\times4}  \\
-        \mathbf{J}_{f}^{-1}  
-    \end{matrix}\right] \in \mathbb{R}^{8\times4},\\
-    \mathbf{J}_{f}&= diag(-m,J_{x},J_{y},J_{z}) \in \mathbb{R}^{4\times4}.\\
-\end{aligned}
-$$
-
-Taking the loss factor into consideration, we could change the control input like
-
-$$
-\begin{aligned}
-    \mathbf{u} &= \mathbf{B}_{f}(\mathbf{I}-\mathbf{\Gamma} _{\eta})\mathbf{f}-\mathbf{g}\\
-        &= \mathbf{B}_{f}\mathbf{f}-\mathbf{g}-\mathbf{B}_{f}\mathbf{\Gamma} _{\eta}\mathbf{f} \\
-        &= \mathbf{u}_{0}-\mathbf{B}_{f}\mathbf{\Gamma}_{f}\mathbf{\eta}
-\end{aligned}
-$$
-
-Thus, expand the loss factor $\mathbf{\eta}$ into the state vector to form a new state vector $\tilde{\mathbf{x}}$ and discretize the state function. We could get the final function used for state estimation as
-
-$$
-\begin{aligned}
-    \dot{\tilde{\mathbf{x}}}_{k+1} &= \left[ \begin{matrix}
-    \mathbf{I}_{4}&\mathbf{I}_{4}\Delta t & -\frac{\Delta t^{2}}{2}\mathbf{M} \\
-    \mathbf{0}_{4\times4} & \mathbf{I}_{4} & -\Delta t\mathbf{M} \\
-    \mathbf{0}_{4\times4}& \mathbf{0}_{4\times4}& \mathbf{I}_{4}
-\end{matrix} \right] \tilde{\mathbf{x}}_{k} + \left[ \begin{matrix}
-    \frac{\Delta t^{2}}{2}\mathbf{J}_{f}^{-1} \\ \Delta t\mathbf{J}_{f}^{-1} \\ \mathbf{0}_{4\times4}
-\end{matrix} \right] \mathbf{u}_{0},  \\
-\mathbf{y} &= \left[\mathbf{I}_{8\times8}\quad\mathbf{0}_{8\times4} \right]\tilde{\mathbf{x}}_{k}, \quad \mathbf{M}=\mathbf{J}_{f}^{-1}\mathbf{B}_{f}\mathbf{\Gamma}_{f}
-\end{aligned}
-$$
-
-$\Delta t$ in the above final function is the sampling time in discretization. From the above function and state vector $\tilde{\mathbf{x}}$, it is easy to find that the information about position $(x, y, z)$, attitude angle $(\phi, \theta, \psi)$, attitude angle rate $(\dot{\phi}, \dot{\theta}, \dot{\psi})$ and motor throttle $\sigma$ of multicopter is in need. In our RflyMAD dataset, it could be get from the `ULog` data by using the toolkit we developed and introduced in [`Quick Use`](#quick-use). The detailed information about the data in shown in the following table.
-
-| Symbol         |Source File in ULog| Usage          |
-| -------------- | ----------------- | -------------- |
-| $\sigma$       | actuator\_outputs\_0.csv | Input parameter of ESC |
-| $(x, y, z)$    | vehicle\_local\_position\_0.csv | Observation vector of KF |
-| $(\phi, \theta, \psi)$ | vehicle\_attitude\_0.csv | Observation vector of KF |
-| $(\dot{\phi}, \dot{\theta}, \dot{\psi})$ | sensor\_combined\_0.csv | Observation vector of KF |
-
-Note: Other information like physical parameters of the multicopter is shown in [OpenHA-Models](https://rfly-openha.github.io/documents/4_resources/multicopter.html) or documents in our RflyMAD dataset.
-
-With the Kalman Filter and detailed information from RflyMAD dataset, the estimated results are shown in the following figure. Compared with the actual fault information, we could find that the estimation result is accurate.
-<img src="./diagnosis2.png" style="zoom: 50%;" />
-
-
-## Notes
+## 6. Notes
 For more information about how to use our dataset, please check other parts of our [OpenHA](https://rfly-openha.github.io/documents/) websites.
 
-## Licence
-RflyMAD dataset is copyright by Reliable Flight Control Group, Beihang University and published under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/). The dataset and related work are supposed to be used in non-commercial situations. If you are intended to use it for commercial purposes, please [contact us](http://rfly.buaa.edu.cn/index.html#/home).
+## 7. Licence
+RflyMAD dataset is copyright by Reliable Flight Control Group, Beihang University. The dataset and related work are supposed to be used in non-commercial situations. If you are intended to use it for commercial purposes, please [contact us](http://rfly.buaa.edu.cn/index.html#/home).
