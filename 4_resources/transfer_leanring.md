@@ -85,7 +85,7 @@ Through the experiments, the following conclusions can be drawn.
 ## 5. Conclusion
 In general, the qualities of simulation data (SIL, HIL) under different fault states and different flight status are high, and they have good supporting ability for real flight data. Simulation data can be used to replace real flight data, and HIL can be replaced by SIL in subsequent experiments and applications, thus reducing costs.
 
-## Reference
+
 [^1]: Zhuang F , Qi Z , Duan K ,et al.A Comprehensive Survey on Transfer Learning[J].  2019.DOI:10.48550/arXiv.1911.02685.
 [^2]: Li, et al. "Adaptive Batch Normalization for practical domain adaptation." Pattern Recognition the Journal of the Pattern Recognition Society (2018).
 [^3]: Martín Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen, Craig Citro, Greg S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin, Sanjay Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard, Rafal Jozefowicz, Yangqing Jia, Lukasz Kaiser, Manjunath Kudlur, Josh Levenberg, Dan Mané, Mike Schuster, Rajat Monga, Sherry Moore, Derek Murray, Chris Olah, Jonathon Shlens, Benoit Steiner, Ilya Sutskever, Kunal Talwar, Paul Tucker, Vincent Vanhoucke, Vijay Vasudevan, Fernanda Viégas, Oriol Vinyals, Pete Warden, Martin Wattenberg, Martin Wicke, Yuan Yu, and Xiaoqiang Zheng. TensorFlow: Large-scale machine learning on heterogeneous systems, 2015. Software available from tensorflow.org.

@@ -101,7 +101,7 @@ With the Kalman Filter and detailed information from RflyMAD dataset, the estima
 
 The above steps show how to use RflyMAD dataset in the process of fault diagnosis, and users can apply their own methods with more message topics in our RflyMAD dataset to get a better results! 
 
-## Reference
+
 [^1]:Xu, R., & Ozguner, U. (2006, December). Sliding mode control of a quadrotor helicopter. In Proceedings of the 45th IEEE Conference on Decision and Control (pp. 4957-4962). IEEE.
 [^2]:Amoozgar, M. H., Chamseddine, A., & Zhang, Y. (2013). Experimental test of a two-stage Kalman filter for actuator fault detection and diagnosis of an unmanned quadrotor helicopter. Journal of Intelligent & Robotic Systems, 70, 107-117.
 [^3]:Du, G. X., & Sun, L. (2018, July). Loss of effectiveness information observability analysis for multicopters. In 2018 3rd International Conference on Advanced Robotics and Mechatronics (ICARM) (pp. 572-576). IEEE.
