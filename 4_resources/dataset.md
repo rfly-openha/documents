@@ -66,6 +66,8 @@ As shown in the figure of dataset hierarchy, each flight within the dataset cont
 
 Note: It is worth noting that the `GTData` only exists in simulation data and the `BAG` files only in real flight data, so there are still four types of data associated with each flight.
 
+### 1.5 Meanings of Command in Flight Information
+In `Flight Information`, there are flight commands, fault types and fault parameters. The exact meaning of these elements can be seen from [here](./flight_information.html). The various elements contained within the flight information are common in both simulation and real-flight data collection. These elements encompass not only flight control commands and fault information for the multicopter but also serve as labeling information within the dataset.
 
 ## 2. Citation
 
