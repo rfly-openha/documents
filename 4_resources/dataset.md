@@ -88,35 +88,35 @@ If you find our dataset is useful, and use our data in your research, please cit
 ## 3. Downloads
 Note: The files below are restored on [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AA899310083D344CB0B74D900504CDE110). If you have access to download them directly, please use this download link with a faster speed. Or if you have any problems to download the dataset from the above link, you can download them with [Baidu Pan]().
 
-Raw data and their related processed files are included in each `.rar`. 
+Raw data and their related processed files are included in each `.zip`. 
 
 |Name          |Link    |Size   |Remark|
 |--------------|--------|-------|------|
-|SIL-Motor(1)  |[.rar]()|8.56GB |SIL Simulation data, including flight statuses like hover and circling|
-|SIL-Motor(2)  |[.rar]()|7.53GB |SIL Simulation data, including flight statuses like waypoints, velocity, acceleration and deceleration|
-|SIL-Prop      |[.rar]()|6.69GB |SIL Simulation data, including all flight statuses with propeller fault|
-|SIL-Sensors   |[.rar]()|11GB   |SIL Simulation data, including all flight statuses with accelerometer, gyroscope, magnetometer, barometer and GPS fault|
-|SIL-Voltage   |[.rar]()|292MB  |SIL Simulation data, low-voltage fault type|
-|SIL-Wind      |[.rar]()|2.1GB  |SIL Simulation data, different wind types and strength|
-|SIL-Load      |[.rar]()|2.1GB  |SIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
-|SIL-No Fault  |[.rar]()|2.85GB |SIL Simulation data, including all flight statuses with no fault|
-|HIL-Motor(1)  |[.rar]()|8.56GB |HIL Simulation data, including flight statuses like hover and circling|
-|HIL-Motor(2)  |[.rar]()|7.53GB |HIL Simulation data, including flight statuses like waypoints, velocity, acceleration and deceleration|
-|HIL-Prop      |[.rar]()|6.69GB |HIL Simulation data, including all flight statuses with propeller fault|
-|HIL-Sensors   |[.rar]()|11GB   |HIL Simulation data, including all flight statuses with accelerometer, gyroscope, magnetometer, barometer and GPS fault|
-|HIL-Voltage   |[.rar]()|292MB  |HIL Simulation data, low-voltage fault type|
-|HIL-Wind      |[.rar]()|2.1GB  |HIL Simulation data, different wind types and strength|
-|HIL-Load      |[.rar]()|2.1GB  |HIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
-|HIL-No Fault  |[.rar]()|2.85GB |SIL Simulation data, including all flight statuses with no fault|
-|Real-Motor    |[.rar]()|15.09GB|Real flight data, including three diagonal size multicopters|
-|Real-Sensors  |[.rar]()|11.76GB|Real flight data, including three diagonal size multicopters|
-|Real-No Fault |[.rar]()|5.49GB |Real flight data, including three diagonal size multicopters|
+|SIL-Motor(1)  |[.zip]()|8.56GB |SIL Simulation data, including flight statuses like hover and circling|
+|SIL-Motor(2)  |[.zip]()|7.53GB |SIL Simulation data, including flight statuses like waypoints, velocity, acceleration and deceleration|
+|SIL-Prop      |[.zip]()|6.69GB |SIL Simulation data, including all flight statuses with propeller fault|
+|SIL-Sensors   |[.zip]()|11GB   |SIL Simulation data, including all flight statuses with accelerometer, gyroscope, magnetometer, barometer and GPS fault|
+|SIL-Voltage   |[.zip]()|292MB  |SIL Simulation data, low-voltage fault type|
+|SIL-Wind      |[.zip]()|2.1GB  |SIL Simulation data, different wind types and strength|
+|SIL-Load      |[.zip]()|2.1GB  |SIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
+|SIL-No Fault  |[.zip]()|2.85GB |SIL Simulation data, including all flight statuses with no fault|
+|HIL-Motor(1)  |[.zip]()|8.56GB |HIL Simulation data, including flight statuses like hover and circling|
+|HIL-Motor(2)  |[.zip]()|7.53GB |HIL Simulation data, including flight statuses like waypoints, velocity, acceleration and deceleration|
+|HIL-Prop      |[.zip]()|6.69GB |HIL Simulation data, including all flight statuses with propeller fault|
+|HIL-Sensors   |[.zip]()|11GB   |HIL Simulation data, including all flight statuses with accelerometer, gyroscope, magnetometer, barometer and GPS fault|
+|HIL-Voltage   |[.zip]()|292MB  |HIL Simulation data, low-voltage fault type|
+|HIL-Wind      |[.zip]()|2.1GB  |HIL Simulation data, different wind types and strength|
+|HIL-Load      |[.zip]()|2.1GB  |HIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
+|HIL-No Fault  |[.zip]()|2.85GB |SIL Simulation data, including all flight statuses with no fault|
+|Real-Motor    |[.zip]()|15.09GB|Real flight data, including three diagonal size multicopters|
+|Real-Sensors  |[.zip]()|11.76GB|Real flight data, including three diagonal size multicopters|
+|Real-No Fault |[.zip]()|5.49GB |Real flight data, including three diagonal size multicopters|
 
 Apart from the above formal data in RflyMAD, we also provide a sample dataset with a smaller size for users to use and check. The processed files of the sample dataset is also given in the following link. The data processing tools used to generate processed files will be introduced in [Quick Use](#quick-use).
 |Name          |Link    |Size   |Remark|
 |--------------|--------|-------|------|
-|SampleData    |[.rar](https://bhpan.buaa.edu.cn/link/AA9BCE69F3CB944158A883E06DAB72B813)|490.75MB |Sample data, including 12 flight cases in each sub-dataset, so there are 36 flight cases in total.|
-|ProcessData   |[.rar](https://bhpan.buaa.edu.cn/link/AA86A1E664D9744A038CE68C35436ACB81)|12.25MB |Processed data of `SampleData`, generated by data processing tools.|
+|SampleData    |[.zip](https://bhpan.buaa.edu.cn/link/AABF6B6F258B304DB89195917E8485943D)|340.34MB |Sample data, including 12 flight cases in each sub-dataset, so there are 36 flight cases in total.|
+|ProcessData   |[.zip](https://bhpan.buaa.edu.cn/link/AA86A1E664D9744A038CE68C35436ACB81)|12.25MB |Processed data of `SampleData`, generated by data processing tools.|
 
 ## 4. Quick Use
 After downloading the RflyMAD dataset, you'd better to reorganize the resources in the following format, just like the [hierarchy](#what-is-rflymad) mentioned before, in order to use our toolkit conveniently.
