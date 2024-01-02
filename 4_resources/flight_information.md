@@ -110,6 +110,9 @@ Users can freely combine commands according to their needs.
 ### 19.Wind Noise
   - ID: 123548
   - Two fault parameters: Wind amplitude disturbance factor (within the range [0,1]) and wind gain level.
+### 20.Without Fault
+  - ID: 123549
+  - No fault parameters, for there is no fault.
 
 ## 3.Meaning of Fault Injection Commands
 The "FaultInject" function is defined as "FaultInject(param)" in the above section, and the input command format is as follows:

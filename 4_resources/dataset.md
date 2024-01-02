@@ -66,8 +66,19 @@ As shown in the figure of dataset hierarchy, each flight within the dataset cont
 
 Note: It is worth noting that the `GTData` only exists in simulation data and the `BAG` files only in real flight data, so there are still four types of data associated with each flight.
 
-### 1.5 Meanings of Command in Flight Information
+### 1.5 Meanings of Flight Command in Flight Information
 In `Flight Information`, there are flight commands, fault types and fault parameters. The exact meaning of these elements can be seen from [here](./flight_information.html). The various elements contained within the flight information are common in both simulation and real-flight data collection. These elements encompass not only flight control commands and fault information for the multicopter but also serve as labeling information within the dataset.
+
+### 1.6 When Faults Occur in RflyMAD
+In the RflyMAD dataset, each instance of data encompasses stages from takeoff to fault injection and concludes with the end of the fault, providing a comprehensive reflection of the impact of faults on the multicopter. In the dataset, for ULOG, ROSBAG and GTDData, specific message types serve as indicators of the presence of faults in each data type. Here, we will introduce them in detail.
+For ULOG data, message `rfly_ctrl_lxl` contains `fault id` and `fault parameter`, which indicate whether a faut has occurred by altering the specific numerical values of signals in this message. The following figure shows when a fault occurs in one flight in ULOG.
+
+<img src="./ULOG_fault_data.png" style="zoom: 80%;" />
+
+For ROSBAG data, just like ULOG data, message `rfly_ctrl_lxl` contains `fault id` and `fault parameter`. The above figure also shows when a fault occurs in one flight in ROSBAG.
+For GTData, message `fault_state`, which located in file `TrueState_data.xlsx` and `UAVState_data.xlsx`, indicates whether there is a fault or not. When a fault occurs, the value of `fault_state` turns to `1`, otherwise, it stays `0` as the following figure shows.
+
+<img src="./GTData_fault.png" style="zoom: 80%;" />
 
 ## 2. Citation
 
@@ -93,10 +104,10 @@ Raw data and their related processed files are included in each `.zip`.
 |SIL-Motor(2)  |[.zip](https://bhpan.buaa.edu.cn/link/AACCF852404555446898452C7CFC38D4DE)|4.06GB|SIL Simulation data, including flight statuses like waypoints, velocity, acceleration and deceleration|
 |SIL-Prop      |[.zip](https://bhpan.buaa.edu.cn/link/AA77207F21913A416EBB7BC2EF268852F3)|3.60GB|SIL Simulation data, including all flight statuses with propeller fault|
 |SIL-Sensors   |[.zip](https://bhpan.buaa.edu.cn/link/AA858E0B0396814813A3C84EE0A9C7D75D)|5.68GB|SIL Simulation data, including all flight statuses with accelerometer, gyroscope, magnetometer, barometer and GPS fault|
-|SIL-Voltage   |[.zip]()|292MB  |SIL Simulation data, low-voltage fault type|
-|SIL-Wind      |[.zip]()|2.1GB  |SIL Simulation data, different wind types and strength|
-|SIL-Load      |[.zip](https://bhpan.buaa.edu.cn/link/AA796E8C3473D446F4A5E075A017BCA9A1)|1.75GB|SIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
-|SIL-No Fault  |[.zip]()|2.85GB |SIL Simulation data, including all flight statuses with no fault|
+|SIL-Voltage   |[.zip](https://bhpan.buaa.edu.cn/link/AA91B234EBC1654B0C849724261F70A922)|313MB|SIL Simulation data, low-voltage fault type|
+|SIL-Wind      |[.zip](https://bhpan.buaa.edu.cn/link/AA920B985748BA47AFBBAB208E92A08D6E)|4.08GB|SIL Simulation data, different wind types and strength|
+|SIL-Load      |[.zip](https://bhpan.buaa.edu.cn/link/AAECCE1E6F3A4C41A1B8B48FA9FA44A4C7)|2.31GB|SIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
+|SIL-No Fault  |[.zip](https://bhpan.buaa.edu.cn/link/AA21F3B984857A47A3B1C32AF1BD460A98)|1.64GB|SIL Simulation data, including all flight statuses with no fault|
 |HIL-Motor(1)  |[.zip](https://bhpan.buaa.edu.cn/link/AA3908771A385F453AA4880F11361B4972)|4.81GB|HIL Simulation data, including flight statuses like hover and circling|
 |HIL-Motor(2)  |[.zip](https://bhpan.buaa.edu.cn/link/AA4F044C7A54D542CB8EB7833BDCAFBBF7)|4.5GB|HIL Simulation data, including flight statuses like waypoints, velocity, acceleration and deceleration|
 |HIL-Prop      |[.zip](https://bhpan.buaa.edu.cn/link/AA3773A4FEC53C426C98C08CE58236F83E)|3.76GB|HIL Simulation data, including all flight statuses with propeller fault|
@@ -104,7 +115,7 @@ Raw data and their related processed files are included in each `.zip`.
 |HIL-Voltage   |[.zip](https://bhpan.buaa.edu.cn/link/AA0864EC8487F6452DAADF24E8F8FA34B1)|357MB|HIL Simulation data, low-voltage fault type|
 |HIL-Wind      |[.zip](https://bhpan.buaa.edu.cn/link/AA999A9EECA74042CABDB672EA3CF1E860)|3.89GB|HIL Simulation data, different wind types and strength|
 |HIL-Load      |[.zip](https://bhpan.buaa.edu.cn/link/AAD007AA4BE0734C2EBC88C822EAE00458)|2.62GB|HIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
-|HIL-No Fault  |[.zip]()|2.85GB |SIL Simulation data, including all flight statuses with no fault|
+|HIL-No Fault  |[.zip](https://bhpan.buaa.edu.cn/link/AAB5347A49713B4FB791ABFA64A1D7DCA4)|1.41GB|SIL Simulation data, including all flight statuses with no fault|
 |Real-Motor    |[.zip](https://bhpan.buaa.edu.cn/link/AAAB87337E786F42EFAA38CB711C0E4CB8)|5.57GB|Real flight data, including three diagonal size multicopters|
 |Real-Sensors  |[.zip](https://bhpan.buaa.edu.cn/link/AA0839FF14C47B46A6AF7A917AEC90574D)|4.01GB|Real flight data, including three diagonal size multicopters|
 |Real-No Fault |[.zip](https://bhpan.buaa.edu.cn/link/AA4311AA86805A430787A4E3B1EC94CC6B)|973MB|Real flight data, including three diagonal size multicopters|
