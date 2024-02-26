@@ -94,7 +94,7 @@ If you find our dataset is useful, and use our data in your research, please cit
 }
 ```
 ## 3. Downloads
-Note: The files below are restored on [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AA899310083D344CB0B74D900504CDE110). If you have access to download them directly, please use this download link with a faster speed. Or if you have any problems to download the dataset from the above link, you can download them with [Baidu Pan]().
+Note: The files below are restored on [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AA899310083D344CB0B74D900504CDE110). If you have access to download them directly, please use this download link with a faster speed. Or if you have any problems to download the dataset from the above link, you can download them with [Kaggle](https://www.kaggle.com/datasets/xianglile/rflymad).
 
 Raw data and their related processed files are included in each `.zip`. 
 
