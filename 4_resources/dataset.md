@@ -157,6 +157,27 @@ After downloading the RflyMAD dataset, you'd better to reorganize the resources 
         ... <Flight status>
 ```
 And the detailed information about how to use our `data processing tools` to extract processed data from RflyMAD dataset is introduced in our [Github repository](https://github.com/lerlis/Data_processing_tools). Please check this site to learn more about our data processing tools in order to use our dataset quickly.
+After using [data processing tools](https://github.com/lerlis/Data_processing_tools), the program will generate processed data files in `--restore_path`, and the file names of the processed data files are arranged according to specific codes as shown in the figure below
+
+<img src="./code.png" style="zoom: 70%;" />
+
+The first number in the code represents the type of data, whether it is real flight data, SIL or HIL data, and the second number represents the flight status of the UAV, the third and fourth numbers represent the fault types. The last six numbers are a simple number arrangement within the same data type. And the specific meaning of the numbers on each coding position could be obtained in the following table
+
+|Number    |Sub-dataset  |Number    |Fault Type   |
+|----------|-------------|----------|-------------|
+|1         | SIL         |0         |motor        |
+|2         | HIL         |1         |propeller    |
+|3         | Real        |2         |low voltage  |
+|----------|------------ |3         |wind affect  |
+|**Number**|**Flight Status**|4     |load lose    |
+| 0        | hover       |5         |accelerometer|
+| 1        | waypoint    |6         |gyroscope    |
+| 2        | velocity    |7         |magnetometer |
+| 3        | circling    |8         |barometer    |
+| 4        | acce        |9         |GPS          |
+| 5        | dece        |10        |No fault     |
+
+For example, if a processed data file named 'Case_3109000005.csv', it means the UAV is flying waypoints under GPS faults, and this flight case is a real flight. `000005` means it maybe the sixth flight case with the same situation during the data extraction process this time.
 
 ## 5. Samples
 Here we show two examples to diagnose faults of multicopters by using data in RflyMAD. The one is data-driven method and the other one is model-based method. On the one hand, users could learn how to use RflyMAD in their research by these two examples. And on the other hand, the support relationship between the simulation and real flight data is also be verified by the transfer learning method.
