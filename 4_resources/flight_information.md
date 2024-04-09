@@ -4,7 +4,7 @@
 ## 1. Control Sequence Composition
 The control sequence consists of various commands, where each command is terminated by a semicolon `;`, and each command is composed of different strings. (All characters are English symbols.) 
 
-The first character of each command represents a control class, and the meanings of the existing control classes are interpreted as follows:
+The first character of each command represents a class of functions, and the meanings of the existing classes are listed as follows:
 1: Time class (including wait by time and wait for reset functions)
 2: Control class (including unlock, lock, position control, velocity control, landing, and fault injection functions)
 
@@ -14,17 +14,17 @@ The second character of each command represents the specific function, and the s
   - 1.Wait by time: Wait(times)
   - 2.Wait for reset: WaitReset(Pos)
 - 2.Control class
-  - 1.Unlock and Takeoff - Arm2takeoff(param)
-  - 2.Lock - DisArm(void)
-  - 3.Position Control - FlyPos(pos)
-  - 4.Velocity Control - FlyVel(vel)
-  - 5.Land - Land(void)
-  - 6.Fault Injection - FaultInject(param)
-  - 7.Yaw Control - FlyYaw(yaw_rad)
-  - 8.Circular Path - FlyCirlce(param)
-  - 9.Waypoint Path - FlyLongTrack(param)
-  - 10.Acceleration and Deceleration Motion - AcceAndDece(param)
-  - 11.Circular Path (with Center) - FlyCircleCenter(param)
+  - 1.Unlock and Takeoff: Arm2takeoff(param)
+  - 2.Lock: DisArm(void)
+  - 3.Position Control: FlyPos(pos)
+  - 4.Velocity Control: FlyVel(vel)
+  - 5.Land: Land(void)
+  - 6.Fault Injection: FaultInject(param)
+  - 7.Yaw Control: FlyYaw(yaw_rad)
+  - 8.Circular Path: FlyCirlce(param)
+  - 9.Waypoint Path: FlyLongTrack(param)
+  - 10.Acceleration and Deceleration Motion: AcceAndDece(param)
+  - 11.Circular Path (with Center): FlyCircleCenter(param)
 
 Here is a provided example,
 ```text
@@ -41,37 +41,117 @@ which could be explained as follows:
 
 Users can freely combine commands according to their needs.
 
-## 2. Exising Fault Types in RflyMAD
+## 2. Meanings of Existing Functions in Control Sequence
+### 1.1 Wait by time
+  - Function name: Wait(times)
+  - Input Parameters: times (1-dimensional, unit:s)
+  - Meaning: Keep last commands for `times` seconds, and wait for next command.
+  - Usage form: `"1,1,times;"`
+
+### 1.2 Wait for reset
+  - Function name: WaitReset(Pos)
+  - Input Parameters: Pos (3-dimensional, units:m)
+  - Meaning: Keep last commands until the UAV reaches the designated location `Pos`.
+  - Usage form: `"1,2,Pos[0],Pos[1],Pos[2];"`
+
+### 2.1 Unlock and Takeoff
+  - Function name: Arm2takeoff(param)
+  - Input Parameters: param[0] (time interval between armed and takeoff), param[1] (take off vz), param[2] (take off h)
+  - Meaning: Used for arming and set the take off height and take off velocity in z-axis.
+  - Usage form: `"2,1,param[0],param[1],param[2];"`
+
+### 2.2 Lock
+  - Function name: Disarm()
+  - Input Parameters: Null
+  - Meaning: Used for disarming the UAV.
+  - Usage form: `"2,2;"`
+
+### 2.3 Position Control
+  - Function name: FlyPos(pos)
+  - Input Parameters: pos (3-dimensional, units:m)
+  - Meaning: Used for navigating the UAV to the designated location `pos` (Inertial Frame, ENU).
+  - Usage form: `"2,3,pos[0],pos[1],pos[2];"`
+
+### 2.4 Velocity Control
+  - Function name: FlyVel(vel)
+  - Input Parameters: vel (3-dimensional, units:m/s)
+  - Meaning: Used to make the UAV fly at a set speed (Body frame, FLU).
+  - Usage form: `"2,4,vel[0],vel[1],vel[2];"`
+
+### 2.5 Land
+  - Function name: Land()
+  - Input Parameters: Null
+  - Meaning: Used to make the UAV land.
+  - Usage form: `"2,5;"`
+
+### 2.6 Fault Injection
+  - Function name: FaultInjec(param)
+  - Input Parameters: param (The detailed information can be seen in [Section 4](#4-meanings-of-fault-injection-commands).)
+  - Meaning: Used to inject the faults into the UAV model.
+  - Usage form: `"2,6,param;"`
+
+### 2.7 Yaw Control
+  - Function name: FlyYaw(yaw_rad)
+  - Input Parameters: yaw_rad (1-dimensional, unit: degree)
+  - Meaning: Used to change the yaw angle of the UAV, usually used with [1.1 Wait](#11-wait-by-time).
+  - Usage form: `"2,7,yaw_rad;"`
+
+### 2.8 Circlar Path
+  - Function name: FlyCircle(param)
+  - Input Parameters: param[0] (radius of the circle, unit:m), param[1] (linear vel of the UAV, unit:m/s), param[2] (fly clockwise:0 or anti-clockwise:1)
+  - Meaning: Used to make the UAV to fly a circle path with designated radius and velocity.
+  - Usage form: `"2,8,param[0],param[1],param[2];"`
+
+### 2.9 Waypoint Track
+  - Function name: FlyLongTrack(param)
+  - Input Parameters: param[0] (vel1), param[1-4] (pos1 & tgt_yaw1), etc...param[0+5i - 4+5i]
+  - Meaning: Used to make the UAV to fly a set of waypoints with designated velocity and location..
+  - Usage form: `"2,9,param[0],param[1+i],param[2+i],param[3+i],param[4+i];"(i=0,1,2,...)`
+
+### 2.10 Acceleration and Deceleration Motion
+  - Function name: AcceAndDece(param)
+  - Input Parameters: param[0] (acceleration), param[1] (time), param[2] (direction: 0 for acceleration and 1 for deceleration)
+  - Meaning: Used to make the UAV to fly with an acceleration.
+  - Usage form: `"2,10,param[0],param[1],param[2];"`
+
+### 2.11 Circular Path (with Center)
+  - Function name: FlyCircleCenter(param)
+  - Input Parameters: param[0] (radius of the circle, unit:m), param[1] (linear vel of the UAV, unit:m/s), param[2] (fly clockwise:0 or anti-clockwise:1), param[3-5] (target position of circle(x, y, z))
+  - Meaning: Used to make the UAV to fly Circlar path with a center in Inertial Frame.
+  - Usage form: `"2,11,param[0],param[1],param[2];"`
+
+## 3. Existing Fault Types in RflyMAD
 ### 1.Motor Fault 
   - ID: 123450
   - Three fault modes (Sudden: 1, Persistent: 2, and Periodic: 11)
+  - The detailed information about meanings of three fault modes can be seen at examples in [Section 4](#4-meanings-of-fault-injection-commands).
   - Four fault parameters within the range [0,1], where 0 represents complete damage, and 1 represents normal.
 ### 2.Propeller Fault 
   - ID: 123451
   - Four fault parameters within the range [0,1], where 0 represents complete damage, and 1 represents normal.
 ### 3.Accelerometer Fault
   - ID: 123452
-  - Two fault modes (Scale Factor: 3, and Noise: 4)
+  - Two fault modes (Noise: 3, and Scale Factor: 4)
   - Scale Factor Fault (3 fault parameters for scale factor coefficient) 
   - Noise Fault (6 fault parameters for noise gain level).
 ### 4.Gyroscope Fault
   - ID: 123453
-  - Two fault modes (Scale Factor: 3, and Noise: 4)
+  - Two fault modes (Noise: 3, and Scale Factor: 4)
   - Scale Factor Fault (3 fault parameters for scale factor coefficient) 
   - Noise Fault (6 fault parameters for noise gain level).
 ### 5.Barometer Fault
   - ID: 123454
-  - Two fault modes (Scale Factor: 3, and Noise: 4)
+  - Two fault modes (Noise: 3, and Scale Factor: 4)
   - Scale Factor Fault (1 fault parameter for scale factor coefficient)
   - Noise Fault (2 fault parameters for noise gain level).
 ### 6.Magnetometer Fault
   - ID: 123455
-  - Two fault modes (Scale Factor: 3, and Noise: 4)
+  - Two fault modes (Noise: 3, and Scale Factor: 4)
   - Scale Factor Fault (3 fault parameters for scale factor coefficient) 
   - Noise Fault (6 fault parameters for noise gain level).
 ### 7.GPS Fault
   - ID: 123456
-  - Two fault modes (Scale Factor: 3, and Noise: 4)
+  - Two fault modes (Noise: 3, and Scale Factor: 4)
   - Scale Factor Fault (3 fault parameters for scale factor coefficient)
   - Noise Fault (6 fault parameters for noise gain level).
 ### 8.Payload Drop Fault
@@ -114,7 +194,7 @@ Users can freely combine commands according to their needs.
   - ID: 123549
   - No fault parameters, for there is no fault.
 
-## 3.Meaning of Fault Injection Commands
+## 4. Meanings of Fault Injection Commands
 The "FaultInject" function is defined as "FaultInject(param)" in the above section, and the input command format is as follows:
 ```text
 2, 6, ID, mode, param[16]
@@ -126,7 +206,7 @@ ID, mode, param[16]
 where:
 - "ID" represents the code for the type of fault.
 - "mode" represents different fault injection modes within a specific fault type.
-- "param[16]" represents specific fault parameters, and their meanings are defined in [Exising Fault Types in RflyMAD](#2-exising-fault-types-in-rflymad).
+- "param[16]" represents specific fault parameters, and their meanings are defined in [Exising Fault Types in RflyMAD](#3-existing-fault-types-in-rflymad).
 
 If there is no `mode` in one fault type, the input command format of "FaultInject" function is as follows:
 ```text
