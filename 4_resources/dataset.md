@@ -1,6 +1,6 @@
 # RflyMAD: A Dataset for Multicopter Fault Detection and Health Assessment
 
-This site presents the **RflyMAD dataset** which is used for multicopter fault detection and isolation (FDI) or health assessment (HA). The dataset is collected from RflySim platform and real flight by Beihang Reliable Flight Control Group (Rfly). There are **5629 flight cases** in total in the dataset, **2566** for software-in-the-loop (SIL) simulatin, **2566** for hardware-in-the-loop (HIL) simulation and **497** for real flight. The dataset includes **11 types of common faults** under **6 flight statuses** to cover more occasions in which the multicopters have different mobility levels when faults occur.
+This site presents the **RflyMAD dataset** which is used for multicopter fault detection and isolation (FDI) or health assessment (HA). The dataset is collected from RflySim platform and real flight by Beihang Reliable Flight Control Group (Rfly). There are **5629 flight cases** in total in the dataset, **2566** for software-in-the-loop (SIL) simulation, **2566** for hardware-in-the-loop (HIL) simulation and **497** for real flight. The dataset includes **11 types of common faults** under **6 flight statuses** to cover more occasions in which the multicopters have different mobility levels when faults occur.
 
 The introduction video of the RflyMAD dataset is now available at [https://www.youtube.com/watch?v=MZby4mOPRu4](https://www.youtube.com/watch?v=MZby4mOPRu4).
 
@@ -38,7 +38,7 @@ There are 11 fault types in RflyMAD dataset, including actuators, sensors of the
 | No Fault       | 200            | 200            | 84          |
 | Total          | 2566           | 2566           | 497         |
 
-Note: $\times$ represents this item does not exist in sub-dataset and the number means the amount of corrresponding cases. 
+Note: $\times$ represents this item does not exist in sub-dataset and the number means the amount of corresponding cases. 
 
 Motor(1-4) represents the number of failure motors is in range of 1 to 4.
 
@@ -123,7 +123,7 @@ Raw data and their related processed files are included in each `.zip`.
 |Real-Sensors  |[.zip](https://bhpan.buaa.edu.cn/link/AA0839FF14C47B46A6AF7A917AEC90574D)|4.01GB|Real flight data, including three diagonal size multicopters|
 |Real-No Fault |[.zip](https://bhpan.buaa.edu.cn/link/AA4311AA86805A430787A4E3B1EC94CC6B)|973MB|Real flight data, including three diagonal size multicopters|
 
-Apart from the above formal data in RflyMAD, we also provide a sample dataset with a smaller size for users to use and check. The processed files of the sample dataset is also given in the following link. The data processing tools used to generate processed files will be introduced in [Quick Use](#quick-use).
+Apart from the above formal data in RflyMAD, we also provide a sample dataset with a smaller size for users to use and check. The processed files of the sample dataset is also given in the following link. The data processing tools used to generate processed files will be introduced in [Quick Use](#5-quick-use).
 |Name          |Link    |Size   |Remark|
 |--------------|--------|-------|------|
 |SampleData    |[.zip](https://bhpan.buaa.edu.cn/link/AABF6B6F258B304DB89195917E8485943D)|340.34MB |Sample data, including 12 flight cases in each sub-dataset, so there are 36 flight cases in total.|
@@ -136,8 +136,23 @@ BuaaAutoTestPlatform : [https://github.com/lerlis/BuaaAutoTestPlatForm](https://
 
 With this platform, users can change the parameters of the multicopter and add their own flight statues and fault types. Detailed information could be seen from the above link.
 
-## 4. Quick Use
-After downloading the RflyMAD dataset, you'd better to reorganize the resources in the following format, just like the [hierarchy](#what-is-rflymad) mentioned before, in order to use our toolkit conveniently.
+## 4. Updates
+Due to the widespread use of ROS in the robotics community and the upgrade of the simulation tools RflySim, the BAG or ROS bag data will be added to the simulation data in the subsequent data updates so that the users can have a wider range of choices. Here a detailed table about dataset updates schedule is shown in the following
+
+|Time               |Update Contents   |Status        |
+|-------------------|------------------|--------------|
+|2023/11/20         |SampleData in Beihang YunPan| Uploaded|
+|2023/11/24         |Whole Data in Beihang YunPan| Uploaded|
+|2024/01/02         |Correct SIL Data in Beihang YunPan | Uploaded|
+|2024/02/28         |Whole Data in Kaggle | Uploaded|
+|2024/09/15         |SIL data with ROS bag | Preparing|
+|2024/10/15         |HIL data with ROS bag | Preparing|
+
+Note: At first, we uploaded the whole dataset to the [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AA899310083D344CB0B74D900504CDE110). And in order to make the download process more convenient, we also uploaded the data to the [Kaggle](https://www.kaggle.com/datasets/xianglile/rflymad) platform. Besides, we keep updating the dataset with more characteristics, such as adding ROS bag data into simulation data, and correcting mistakes in the RflyMAD dataset. All of the update information will be recorded in the above table. If you have any questions, please [contact us](#8-licence).
+
+
+## 5. Quick Use
+After downloading the RflyMAD dataset, you'd better to reorganize the resources in the following format, just like the [hierarchy](#1-what-is-rflymad) mentioned before, in order to use our toolkit conveniently.
 ```
 \RflyMAD dataset
     \SIL
@@ -192,17 +207,17 @@ The first number in the code represents the type of data, whether it is real fli
 
 For example, if a processed data file named 'Case_3109000005.csv', it means the UAV is flying waypoints under GPS faults, and this flight case is a real flight. `000005` means it maybe the sixth flight case with the same situation during the data extraction process this time.
 
-## 5. Samples
+## 6. Samples
 Here we show two examples to diagnose faults of multicopters by using data in RflyMAD. The one is data-driven method and the other one is model-based method. On the one hand, users could learn how to use RflyMAD in their research by these two examples. And on the other hand, the support relationship between the simulation and real flight data is also be verified by the transfer learning method.
 
-### 5.1 Data-driven Method --- Transfer Learning
+### 6.1 Data-driven Method --- Transfer Learning
 The detailed methods and results can be accessed from [Supplementary experiments to verify data support ability based on transfer learning](./transfer_leanring.html).
 
-### 5.2 Model-based Method --- Kalman Filter
+### 6.2 Model-based Method --- Kalman Filter
 In this method, we use Kalman Filter to estimate the fault conditions of one flight case in RflyMAD dataset. The detailed information about how a simplified dynamic model is established for the multicopter and how to use kalman filtering method in the process of fault diagnosis while utilizing appropriate data can be found in the [Model-based Method: Kalman Filter](./model_based_KF.html).
 
-## 6. Notes
+## 7. Notes
 For more information about how to use our dataset, please check other parts of our [OpenHA](https://rfly-openha.github.io/documents/) websites.
 
-## 7. Licence
+## 8. Licence
 RflyMAD dataset is copyright by Reliable Flight Control Group, Beihang University. The dataset and related work are supposed to be used in non-commercial situations. If you are intended to use it for commercial purposes, please [contact us](http://rfly.buaa.edu.cn/index.html#/home) or from email: `qq_buaa@buaa.edu.cn` or `lexiangli@buaa.edu.cn`.
