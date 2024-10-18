@@ -97,37 +97,47 @@ If you find our dataset is useful, and use our data in your research, please cit
 ```
 ## 3. Downloads
 ### 3.1 Datasets Downloads 
-Note: The files below are restored on [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AA899310083D344CB0B74D900504CDE110). If you have access to download them directly, please use this download link with a faster speed. Or if you have any problems to download the dataset from the above link, you can download them with [Kaggle](https://www.kaggle.com/datasets/xianglile/rflymad).
+Note: The files below are restored on [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AAD55429DDA43A487191D48ADA4742243D). If you have access to download them directly, please use this download link with a faster speed. Or if you have any problems to download the dataset from the above link, you can download them with [Kaggle](https://www.kaggle.com/datasets/xianglile/rflymad).
 
 Raw data and their related processed files are included in each `.zip`. 
 
 |Name          |Link    |Size   |Remark|
 |--------------|--------|-------|------|
-|SIL-Motor(1)  |[.zip](https://bhpan.buaa.edu.cn/link/AABD495CE9C1574D8BA5C9169320764FA4)|4.61GB|SIL Simulation data, including flight statuses like hover and circling|
-|SIL-Motor(2)  |[.zip](https://bhpan.buaa.edu.cn/link/AACCF852404555446898452C7CFC38D4DE)|4.06GB|SIL Simulation data, including flight statuses like waypoints, velocity, acceleration and deceleration|
-|SIL-Prop      |[.zip](https://bhpan.buaa.edu.cn/link/AA77207F21913A416EBB7BC2EF268852F3)|3.60GB|SIL Simulation data, including all flight statuses with propeller fault|
-|SIL-Sensors   |[.zip](https://bhpan.buaa.edu.cn/link/AA858E0B0396814813A3C84EE0A9C7D75D)|5.68GB|SIL Simulation data, including all flight statuses with accelerometer, gyroscope, magnetometer, barometer and GPS fault|
-|SIL-Voltage   |[.zip](https://bhpan.buaa.edu.cn/link/AA91B234EBC1654B0C849724261F70A922)|313MB|SIL Simulation data, low-voltage fault type|
-|SIL-Wind      |[.zip](https://bhpan.buaa.edu.cn/link/AA920B985748BA47AFBBAB208E92A08D6E)|4.08GB|SIL Simulation data, different wind types and strength|
-|SIL-Load      |[.zip](https://bhpan.buaa.edu.cn/link/AAECCE1E6F3A4C41A1B8B48FA9FA44A4C7)|2.31GB|SIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
-|SIL-No Fault  |[.zip](https://bhpan.buaa.edu.cn/link/AA21F3B984857A47A3B1C32AF1BD460A98)|1.64GB|SIL Simulation data, including all flight statuses with no fault|
-|HIL-Motor(1)  |[.zip](https://bhpan.buaa.edu.cn/link/AA3908771A385F453AA4880F11361B4972)|4.81GB|HIL Simulation data, including flight statuses like hover and circling|
-|HIL-Motor(2)  |[.zip](https://bhpan.buaa.edu.cn/link/AA4F044C7A54D542CB8EB7833BDCAFBBF7)|4.5GB|HIL Simulation data, including flight statuses like waypoints, velocity, acceleration and deceleration|
-|HIL-Prop      |[.zip](https://bhpan.buaa.edu.cn/link/AA3773A4FEC53C426C98C08CE58236F83E)|3.76GB|HIL Simulation data, including all flight statuses with propeller fault|
-|HIL-Sensors   |[.zip](https://bhpan.buaa.edu.cn/link/AA5BD520CE2B2142D3B4DAD236CB970F99)|5.91GB|HIL Simulation data, including all flight statuses with accelerometer, gyroscope, magnetometer, barometer and GPS fault|
-|HIL-Voltage   |[.zip](https://bhpan.buaa.edu.cn/link/AA0864EC8487F6452DAADF24E8F8FA34B1)|357MB|HIL Simulation data, low-voltage fault type|
-|HIL-Wind      |[.zip](https://bhpan.buaa.edu.cn/link/AA999A9EECA74042CABDB672EA3CF1E860)|3.89GB|HIL Simulation data, different wind types and strength|
-|HIL-Load      |[.zip](https://bhpan.buaa.edu.cn/link/AAD007AA4BE0734C2EBC88C822EAE00458)|2.62GB|HIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
-|HIL-No Fault  |[.zip](https://bhpan.buaa.edu.cn/link/AAB5347A49713B4FB791ABFA64A1D7DCA4)|1.41GB|SIL Simulation data, including all flight statuses with no fault|
-|Real-Motor    |[.zip](https://bhpan.buaa.edu.cn/link/AA64A4EF5DFBB04BA2A4CB0D19ED08A584)|5.57GB|Real flight data, including three diagonal size multicopters|
-|Real-Sensors  |[.zip](https://bhpan.buaa.edu.cn/link/AA0839FF14C47B46A6AF7A917AEC90574D)|4.01GB|Real flight data, including three diagonal size multicopters|
-|Real-No Fault |[.zip](https://bhpan.buaa.edu.cn/link/AA4311AA86805A430787A4E3B1EC94CC6B)|973MB|Real flight data, including three diagonal size multicopters|
+|SIL-Motor(1)  |[.zip](https://bhpan.buaa.edu.cn/link/AACFD6FFCA27134D3DA1154EBF7A86F934)|4.61GB|SIL Simulation data, including flight statuses like hover and circling|
+|SIL-Motor(2)  |[.zip](https://bhpan.buaa.edu.cn/link/AAC602DDCC27954DFC9D47CEB719908ED0)|4.06GB|SIL Simulation data, including flight statuses like waypoints, velocity, acceleration and deceleration|
+|SIL-Prop      |[.zip](https://bhpan.buaa.edu.cn/link/AA309BF00E81CF44D6B109AA68434478BC)|3.60GB|SIL Simulation data, including all flight statuses with propeller fault|
+|SIL-Sensors   |[.zip](https://bhpan.buaa.edu.cn/link/AA08E886A94AF14B258E11B2EB05BC8033)|5.68GB|SIL Simulation data, including all flight statuses with accelerometer, gyroscope, magnetometer, barometer and GPS fault|
+|SIL-Voltage   |[.zip](https://bhpan.buaa.edu.cn/link/AA4B1B5F453D1F4CA0806AFD311ECA9677)|313MB|SIL Simulation data, low-voltage fault type|
+|SIL-Wind      |[.zip](https://bhpan.buaa.edu.cn/link/AAA02C8B2951764FC485CA3321613D05BF)|4.08GB|SIL Simulation data, different wind types and strength|
+|SIL-Load      |[.zip](https://bhpan.buaa.edu.cn/link/AA9FF38B83874F4774AEB6085531AAE22D)|2.31GB|SIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
+|SIL-No Fault  |[.zip](https://bhpan.buaa.edu.cn/link/AA44D0E9AE064B4846BA07331FFDEE7270)|1.64GB|SIL Simulation data, including all flight statuses with no fault|
+|HIL-Motor(1)  |[.zip](https://bhpan.buaa.edu.cn/link/AA35F6413533C140FC9888D993B1348598)|4.81GB|HIL Simulation data, including flight statuses like hover and circling|
+|HIL-Motor(2)  |[.zip](https://bhpan.buaa.edu.cn/link/AA08BB52AF8A8E41698844B995D3ACA4CE)|4.5GB|HIL Simulation data, including flight statuses like waypoints, velocity, acceleration and deceleration|
+|HIL-Prop      |[.zip](https://bhpan.buaa.edu.cn/link/AA5356D7CB0CB648989B19F53C29B4718E)|3.76GB|HIL Simulation data, including all flight statuses with propeller fault|
+|HIL-Sensors   |[.zip](https://bhpan.buaa.edu.cn/link/AADDF5726E30194CB5B9196CC2F8AB6563)|5.91GB|HIL Simulation data, including all flight statuses with accelerometer, gyroscope, magnetometer, barometer and GPS fault|
+|HIL-Voltage   |[.zip](https://bhpan.buaa.edu.cn/link/AAF4A5CCEBC17544459F9C68F0FB303F17)|357MB|HIL Simulation data, low-voltage fault type|
+|HIL-Wind      |[.zip](https://bhpan.buaa.edu.cn/link/AAE1F5E63960144F76B6C0B32CCD58CB60)|3.89GB|HIL Simulation data, different wind types and strength|
+|HIL-Load      |[.zip](https://bhpan.buaa.edu.cn/link/AAE1F5E63960144F76B6C0B32CCD58CB60)|2.62GB|HIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
+|HIL-No Fault  |[.zip](https://bhpan.buaa.edu.cn/link/AAE1F5E63960144F76B6C0B32CCD58CB60)|1.41GB|SIL Simulation data, including all flight statuses with no fault|
+|Real-Motor    |[.zip](https://bhpan.buaa.edu.cn/link/AAE1F5E63960144F76B6C0B32CCD58CB60)|5.57GB|Real flight data, including three diagonal size multicopters|
+|Real-Sensors  |[.zip](https://bhpan.buaa.edu.cn/link/AAEB518D137C7A433CBBFBDC5648B0CE1A)|4.01GB|Real flight data, including three diagonal size multicopters|
+|Real-No Fault |[.zip](https://bhpan.buaa.edu.cn/link/AAE232A92C35A64F4BA59A68088582B46A)|973MB|Real flight data, including three diagonal size multicopters|
 
 Apart from the above formal data in RflyMAD, we also provide a sample dataset with a smaller size for users to use and check. The processed files of the sample dataset is also given in the following link. The data processing tools used to generate processed files will be introduced in [Quick Use](#5-quick-use).
 |Name          |Link    |Size   |Remark|
 |--------------|--------|-------|------|
-|SampleData    |[.zip](https://bhpan.buaa.edu.cn/link/AABF6B6F258B304DB89195917E8485943D)|340.34MB |Sample data, including 12 flight cases in each sub-dataset, so there are 36 flight cases in total.|
-|ProcessData   |[.zip](https://bhpan.buaa.edu.cn/link/AA86A1E664D9744A038CE68C35436ACB81)|12.25MB |Processed data of `SampleData`, generated by data processing tools.|
+|SampleData    |[.zip](https://bhpan.buaa.edu.cn/link/AA2F44EA2844824716A87512E959952823)|340.34MB |Sample data, including 12 flight cases in each sub-dataset, so there are 36 flight cases in total.|
+|ProcessData   |[.zip](https://bhpan.buaa.edu.cn/link/AA883548360DCE4E39A0F979DA9EF66791)|12.25MB |Processed data of `SampleData`, generated by data processing tools.|
+
+Recently, we updates our simualtion tools, [RflySim](https://rflysim.com/doc/en/), and make it have the ability of simulating together with ROS, so the `ROS bag` data is also available in SIL and HIL simulation data. Thus the RflyMAD simulation data with ROS bag may provide convenience for users who are experts in Robotics community. The links are in the following, and we also put these data in [Kaggle](https://www.kaggle.com/datasets/xianglile/rflymad-withros). So if you have problems to download them from following links, you can choose to download them from [Kaggle](https://www.kaggle.com/datasets/xianglile/rflymad-withros) ! 
+
+|Name          |Link    |Size   |Remark|
+|--------------|--------|-------|------|
+|SIL_Motor_ROS |[.zip](https://bhpan.buaa.edu.cn/link/AAE2A7CC372E19406F88ED67FEEB9756AC)|5.63GB |SIL Simulation data, including all flight statuses with all kinds of motor faults.|
+|SIL_NoFault_ROS|[.zip](https://bhpan.buaa.edu.cn/link/AA713075956704419E8DF827D7E7FB9DDF)|1009MB | SIL Simulation data, including all flight statuses with no fault.|
+|HIL_Motor_ROS |[.zip](https://bhpan.buaa.edu.cn/link/AAD802B9C2A76544B5B49A710F1601E357)|7.14GB |HIL Simulation data, including all flight statuses with all kinds of motor faults.|
+|HIL_NoFault_ROS|[.zip](https://bhpan.buaa.edu.cn/link/AAFC26363D674D494BBFB3B68437297224)|1.41GB | HIL Simulation data, including all flight statuses with no fault.|
+
 
 ### 3.2 AutoTest Platform Downloads
 If users want to collect their own simulation data (including SIL simulation and HIL simulation data), an autotest platform is provided for users to download from the following link:
@@ -144,11 +154,12 @@ Due to the widespread use of ROS in the robotics community and the upgrade of th
 |2023/11/20         |SampleData in Beihang YunPan| Uploaded|
 |2023/11/24         |Whole Data in Beihang YunPan| Uploaded|
 |2024/01/02         |Correct SIL Data in Beihang YunPan | Uploaded|
-|2024/02/28         |Whole Data in Kaggle | Uploaded|
-|2024/09/15         |SIL data with ROS bag | Preparing|
-|2024/10/15         |HIL data with ROS bag | Preparing|
+|2024/02/28         |Whole Data in Kaggle | Uploaded |
+|2024/09/15         |SIL data with ROS bag | Uploaded |
+|2024/10/15         |HIL data with ROS bag | Uploaded |
+|Continuing         |New content | Preparing |
 
-Note: At first, we uploaded the whole dataset to the [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AA899310083D344CB0B74D900504CDE110). And in order to make the download process more convenient, we also uploaded the data to the [Kaggle](https://www.kaggle.com/datasets/xianglile/rflymad) platform. Besides, we keep updating the dataset with more characteristics, such as adding ROS bag data into simulation data, and correcting mistakes in the RflyMAD dataset. All of the update information will be recorded in the above table. If you have any questions, please [contact us](#8-licence).
+Note: At first, we uploaded the whole dataset to the [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AAD55429DDA43A487191D48ADA4742243D). And in order to make the download process more convenient, we also uploaded the data to the [Kaggle](https://www.kaggle.com/datasets/xianglile/rflymad) platform. Besides, we keep updating the dataset with more characteristics, such as adding ROS bag data into simulation data, and correcting mistakes in the RflyMAD dataset. All of the update information will be recorded in the above table. If you have any questions, please [contact us](#8-licence).
 
 
 ## 5. Quick Use
