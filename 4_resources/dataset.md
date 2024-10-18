@@ -4,6 +4,9 @@ This site presents the **RflyMAD dataset** which is used for multicopter fault d
 
 The introduction video of the RflyMAD dataset is now available at [https://www.youtube.com/watch?v=MZby4mOPRu4](https://www.youtube.com/watch?v=MZby4mOPRu4).
 
+UPDATES:
+Now, simulation data with ROS bag is available to download ! Please see [Downloads](#31-datasets-downloads)
+
 ## 1. What is RflyMAD?
 Different from research fields like computer vision, batteries, and mechanical vibration, there are relatively few publicly datasets related to the FDI, PHM and HA problems of aircraft systems. Regarding the lack of fault dataset, we form RflyMAD dataset. The RflyMAD dataset contains both simulation and real flight data, and covers sufficient fault types and flight statuses, ensuring both quantity and quality.
 
@@ -38,9 +41,11 @@ There are 11 fault types in RflyMAD dataset, including actuators, sensors of the
 | No Fault       | 200            | 200            | 84          |
 | Total          | 2566           | 2566           | 497         |
 
-Note: $\times$ represents this item does not exist in sub-dataset and the number means the amount of corresponding cases. 
+Note: 
 
-Motor(1-4) represents the number of failure motors is in range of 1 to 4.
+1. $\times$ represents this item does not exist in sub-dataset and the number means the amount of corresponding cases. 
+2. `SILwithROS` and `HILwithROS` data are keep updating, so the exact number of flight cases in them are not counted temporarily.
+3. Motor(1-4) represents the number of failure motors is in range of 1 to 4.
 
 ### 1.3 Sufficient Flight Statuses
 
@@ -55,7 +60,10 @@ The following table lists all 6 flight statuses in this dataset.
 |Acceleration       |$\surd$       |$\surd$       |$\surd$    |
 |Deceleration       |$\surd$       |$\surd$       |$\times$   |
 
-Note: $\surd$ represents this item exists in sub-dataset and $\times$ represents not.
+Note: 
+
+1. $\surd$ represents this item exists in sub-dataset and $\times$ represents not.
+2. `SILwithROS` and `HILwithROS` data are keep updating, so the exact number of flight cases in them are not counted temporarily.
 
 ### 1.4 Exact Data in One Flight Case
 
@@ -191,6 +199,10 @@ After downloading the RflyMAD dataset, you'd better to reorganize the resources 
         ... <Flight status>
     \Real
         ... <Flight status>
+    \SILwithROS
+        ... <Flight status>
+    \HILwithROS
+        ... <Flight status>
 ```
 The detailed information about how to use our `data processing tools` to extract processed data from RflyMAD dataset is introduced in our Github repository and the download link is in the following
 
@@ -207,14 +219,15 @@ The first number in the code represents the type of data, whether it is real fli
 |1         | SIL         |0         |motor        |
 |2         | HIL         |1         |propeller    |
 |3         | Real        |2         |low voltage  |
-|----------|------------ |3         |wind affect  |
-|**Number**|**Flight Status**|4     |load lose    |
-| 0        | hover       |5         |accelerometer|
-| 1        | waypoint    |6         |gyroscope    |
-| 2        | velocity    |7         |magnetometer |
-| 3        | circling    |8         |barometer    |
-| 4        | acce        |9         |GPS          |
-| 5        | dece        |10        |No fault     |
+|4         | SILwithROS  |3         |wind affect  |
+|5         | HILwithROS  |4         |load lose    |
+|**Number**|**Flight Status**|5     |accelerometer|
+| 0        | hover       |6         |gyroscope    |
+| 1        | waypoint    |7         |magnetometer |
+| 2        | velocity    |8         |barometer    |
+| 3        | circling    |9         |GPS          |
+| 4        | acce        |10        |No fault     |
+| 5        | dece        |...       |...          |
 
 For example, if a processed data file named 'Case_3109000005.csv', it means the UAV is flying waypoints under GPS faults, and this flight case is a real flight. `000005` means it maybe the sixth flight case with the same situation during the data extraction process this time.
 
