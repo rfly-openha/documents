@@ -18,6 +18,7 @@
     1. [Datasets](./4_resources/dataset.html)
     1. [Models](./4_resources/multicopter.html)
 - Downloads and Support
+    1. [Bayesian net downloads](./5_downlaod_support/BayesianNetDownload.html)
 
 <!-- 当前目录中的部分二级项目尚未完成 -->
 <!-- 可根据实际情况对内容进行适当删减等调整 -->

@@ -61,14 +61,16 @@ There is a table of all the submodules and functions defined in OpenHA.
 
 All the documentations are available via the links.
 
-1. [OpenHA.core](#openhacore)
-1. OpenHA.assessment
-   1. [OpenHA.assessment.attribute](#openhaassessmentattribute)
-   1. [OpenHA.assessment.system](#openhaassessmentsystem)
-1. OpenHA.processing
-   1. [OpenHA.processing.feature](#openhaprocessingfeature)
-   1. [OpenHA.processing.preprocessing](#openhaprocessingpreprocessing)
-1. [OpenHA.prognostics](#openhaprognostics)
+- [OpenHA.core](#openhacore)
+- OpenHA.assessment
+  - [OpenHA.assessment.attribute](#openhaassessmentattribute)
+  - [OpenHA.assessment.system](#openhaassessmentsystem)
+- OpenHA.processing
+  - [OpenHA.processing.feature](#openhaprocessingfeature)
+  - [OpenHA.processing.preprocessing](#openhaprocessingpreprocessing)
+- OpenHA.prognotics
+  - [OpenHA.prognostics.data_based](#openhaprognosticsdata_based)
+  - [OpenHA.prognostics.model_based](#openhaprognosticsmodel_based)
 
 ### `OpenHA.core`
 
@@ -119,6 +121,12 @@ All the documentations are available via the links.
 | [interpolation](./interpolation.html)               | Interpolation.                                                  |
 | [local_outlier_factor](./local_outlier_factor.html) | The Local Outlier Factors (LOF) of all the points are computed. |
 
-### `OpenHA.prognostics`
+### `OpenHA.prognostics.data_based`
+| functions                                           | description                                                     |
+| --------------------------------------------------- | --------------------------------------------------------------- |
+| [bay_set_model](./bay_set_model.html)   | Train Bayesian network model.  |
+| [baynet_inference](./baynet_inference.html) | Reload pre-trained Bayesian network model and predict the probability of faults.|
+
+### `OpenHA.prognostics.model_based`
 
 Under developing...
