@@ -15,10 +15,15 @@
     1. [How to Contribute?](./3_developer/how_to_contribute.html)
     1. [Planning](./3_developer/planning.html)
 - Resources
-    1. [Datasets](./4_resources/dataset.html)
-    1. [Models](./4_resources/multicopter.html)
+    -  Datasets
+       1. [RflyMAD Dataset](./4_resources/dataset.html)
+       2. To be updated
+    -  Models
+       1. [Multicopter Model](./4_resources/multicopter.html)
+       2. To be updated
 - Downloads and Support
     1. [Bayesian net downloads](./5_download_support/BayesianNetDownload.html)
+    2. To be updated
 
 <!-- 当前目录中的部分二级项目尚未完成 -->
 <!-- 可根据实际情况对内容进行适当删减等调整 -->
