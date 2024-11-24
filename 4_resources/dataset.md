@@ -5,7 +5,8 @@ This site presents the **RflyMAD dataset** which is used for multicopter fault d
 The introduction video of the RflyMAD dataset is now available at [https://www.youtube.com/watch?v=MZby4mOPRu4](https://www.youtube.com/watch?v=MZby4mOPRu4).
 
 UPDATES:
-Now, simulation data with ROS bag is available to download ! Please see [Downloads](#31-datasets-downloads)
+1. Correct SIL motor hover data in [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AAD55429DDA43A487191D48ADA4742243D) and [Kaggle RflyMAD-SIL](https://www.kaggle.com/datasets/xianglile/rflymad-sil).
+2. Now, simulation data with ROS bag is available to download ! Please see [Downloads](#31-datasets-downloads).
 
 ## 1. What is RflyMAD?
 Different from research fields like computer vision, batteries, and mechanical vibration, there are relatively few publicly datasets related to the FDI, PHM and HA problems of aircraft systems. Regarding the lack of fault dataset, we form RflyMAD dataset. The RflyMAD dataset contains both simulation and real flight data, and covers sufficient fault types and flight statuses, ensuring both quantity and quality.
@@ -111,7 +112,7 @@ Raw data and their related processed files are included in each `.zip`.
 
 |Name          |Link    |Size   |Remark|
 |--------------|--------|-------|------|
-|SIL-Motor(1)  |[.zip](https://bhpan.buaa.edu.cn/link/AACFD6FFCA27134D3DA1154EBF7A86F934)|4.61GB|SIL Simulation data, including flight statuses like hover and circling|
+|SIL-Motor(1)  |[.zip](https://bhpan.buaa.edu.cn/link/AA4567A449B63C4F10AB7213134BA6C678)|4.33GB|SIL Simulation data, including flight statuses like hover and circling|
 |SIL-Motor(2)  |[.zip](https://bhpan.buaa.edu.cn/link/AAC602DDCC27954DFC9D47CEB719908ED0)|4.06GB|SIL Simulation data, including flight statuses like waypoints, velocity, acceleration and deceleration|
 |SIL-Prop      |[.zip](https://bhpan.buaa.edu.cn/link/AA309BF00E81CF44D6B109AA68434478BC)|3.60GB|SIL Simulation data, including all flight statuses with propeller fault|
 |SIL-Sensors   |[.zip](https://bhpan.buaa.edu.cn/link/AA08E886A94AF14B258E11B2EB05BC8033)|5.68GB|SIL Simulation data, including all flight statuses with accelerometer, gyroscope, magnetometer, barometer and GPS fault|
@@ -165,6 +166,7 @@ Due to the widespread use of ROS in the robotics community and the upgrade of th
 |2024/02/28         |Whole Data in Kaggle | Uploaded |
 |2024/09/15         |SIL data with ROS bag | Uploaded |
 |2024/10/15         |HIL data with ROS bag | Uploaded |
+|2024/11/24         |Correct SIL Data in Beihang YunPan and Kaggle| Uploaded|
 |Continuing         |New content | Preparing |
 
 Note: At first, we uploaded the whole dataset to the [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AAD55429DDA43A487191D48ADA4742243D). And in order to make the download process more convenient, we also uploaded the data to the [Kaggle](https://www.kaggle.com/datasets/xianglile/rflymad) platform. Besides, we keep updating the dataset with more characteristics, such as adding ROS bag data into simulation data, and correcting mistakes in the RflyMAD dataset. All of the update information will be recorded in the above table. If you have any questions, please [contact us](#8-licence).
