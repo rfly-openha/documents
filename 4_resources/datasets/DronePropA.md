@@ -10,7 +10,7 @@ This data article introduces a comprehensive dataset composed of motion trajecto
 ## 2. Citation
 If you find our dataset is useful, and use our data in your research, please cite it as:
 ```
-Ismail, Mohamed AA; Elshaar, Mohssen E; Abdallah, Ayman; Quan, Quan (2024), “DronePropA: Motion Trajectories Dataset for Commercial Drones with Defective Propellers”, Mendeley Data, V1, doi: 10.17632/ftdyxrr3c5.1
+Ismail, Mohamed AA; Elshaar, Mohssen E; Abdallah, Ayman; Quan, Quan (2024), “DronePropA: Motion Trajectories Dataset for Commercial Drones with Defective Propellers”, Mendeley Data, V1, doi: 10.17632/ftdyxrr3c5.1  or https://rfly-openha.github.io/documents/4_resources/datasets/DronePropA.html
 ```
 
 ## 3. Downloads
