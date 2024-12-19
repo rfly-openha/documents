@@ -17,7 +17,8 @@
 - Resources
     -  Datasets
        1. [RflyMAD Dataset](./4_resources/dataset.html)
-       2. To be updated
+       2. [DronePropA Dataset](./4_resources/datasets/DronePropA.html)
+       3. To be updated
     -  Models
        1. [Multicopter Model](./4_resources/multicopter.html)
        2. To be updated
