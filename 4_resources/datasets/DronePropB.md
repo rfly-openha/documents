@@ -17,7 +17,7 @@ Ismail, Mohamed AA; Elshaar, Mohssen E.; Abdalla, Ayman; Quan, Quan (2024), “D
 The files below are restored on [Beihang University Yunpan](https://bhpan.buaa.edu.cn/link/AADDCA6B333A064905A3C49ACD465AC5AC). If you have access to download them directly, please use this download link with a faster speed. Or if you have any problems to download the dataset from the above link, you can download them with [Mendeley Data](https://data.mendeley.com/datasets/xkvfjmm8zg/1).
 |Name          |Link    |Size   |Remark|
 |--------------|--------|-------|------|
-|DronePropB    |[.zip](https://bhpan.buaa.edu.cn/link/AA08E191F0A4814C34964F5A630AB2D4E9)|478 MB|Real experimental indoor flights with faulty propellers|
+|DronePropB    |[.zip](https://bhpan.buaa.edu.cn/link/AA08E191F0A4814C34964F5A630AB2D4E9)|478MB|Real experimental indoor flights with faulty propellers|
 
 ## 4. Institutions and Funding
 King Fahd University of Petroleum and Minerals
