@@ -126,9 +126,9 @@ Raw data and their related processed files are included in each `.zip`.
 |HIL-Sensors   |[.zip](https://bhpan.buaa.edu.cn/link/AADDF5726E30194CB5B9196CC2F8AB6563)|5.91GB|HIL Simulation data, including all flight statuses with accelerometer, gyroscope, magnetometer, barometer and GPS fault|
 |HIL-Voltage   |[.zip](https://bhpan.buaa.edu.cn/link/AAF4A5CCEBC17544459F9C68F0FB303F17)|357MB|HIL Simulation data, low-voltage fault type|
 |HIL-Wind      |[.zip](https://bhpan.buaa.edu.cn/link/AAE1F5E63960144F76B6C0B32CCD58CB60)|3.89GB|HIL Simulation data, different wind types and strength|
-|HIL-Load      |[.zip](https://bhpan.buaa.edu.cn/link/AAE1F5E63960144F76B6C0B32CCD58CB60)|2.62GB|HIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
-|HIL-No Fault  |[.zip](https://bhpan.buaa.edu.cn/link/AAE1F5E63960144F76B6C0B32CCD58CB60)|1.41GB|SIL Simulation data, including all flight statuses with no fault|
-|Real-Motor    |[.zip](https://bhpan.buaa.edu.cn/link/AAE1F5E63960144F76B6C0B32CCD58CB60)|5.57GB|Real flight data, including three diagonal size multicopters|
+|HIL-Load      |[.zip](https://bhpan.buaa.edu.cn/link/AA56E4F9B54D5A445BB91D01E299FC58DC)|2.62GB|HIL Simulation data, changing the weight or distribution of loads in multicopter during the flight|
+|HIL-No Fault  |[.zip](https://bhpan.buaa.edu.cn/link/AA446BFA7EE0CE46599F128961013F7E71)|1.41GB|SIL Simulation data, including all flight statuses with no fault|
+|Real-Motor    |[.zip](https://bhpan.buaa.edu.cn/link/AA78C66F35A01D4EA29C12BF0E17FF483A)|5.57GB|Real flight data, including three diagonal size multicopters|
 |Real-Sensors  |[.zip](https://bhpan.buaa.edu.cn/link/AAEB518D137C7A433CBBFBDC5648B0CE1A)|4.01GB|Real flight data, including three diagonal size multicopters|
 |Real-No Fault |[.zip](https://bhpan.buaa.edu.cn/link/AAE232A92C35A64F4BA59A68088582B46A)|973MB|Real flight data, including three diagonal size multicopters|
 
