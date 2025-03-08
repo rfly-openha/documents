@@ -19,7 +19,8 @@
        1. [RflyMAD Dataset](./4_resources/dataset.html)
        2. [DronePropA Dataset](./4_resources/datasets/DronePropA.html)
        3. [DronePropB Dataset](./4_resources/datasets/DronePropB.html)
-       4. To be updated
+       4. [CMG Dataset](./4_resources/datasets/CMGDataset.html)
+       5. To be updated
     -  Models
        1. [Multicopter Model](./4_resources/multicopter.html)
        2. To be updated
