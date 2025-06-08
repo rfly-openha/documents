@@ -92,16 +92,16 @@ For GTData, message `fault_state`, which located in file `TrueState_data.xlsx` a
 <img src="./GTData_fault.png" style="zoom: 80%;" />
 
 ## 2. Citation
-Our data paper is now available at [Arxiv](https://arxiv.org/abs/2311.11340). If you are interested in our dataset, you can also read our [data paper](https://arxiv.org/abs/2311.11340) !
+Our data paper is now available at [Sage Journals IJRR](https://journals.sagepub.com/doi/abs/10.1177/02783649241305153). If you are interested in our dataset, you can also read our [data paper](./rflymad_accepted.pdf) !
 If you find our dataset is useful, and use our data in your research, please cite it as:
 ```
-@misc{le2023rflymad,
-      title={RflyMAD: A Dataset for Multicopter Fault Detection and Health Assessment}, 
-      author={Xiangli Le and Bo Jin and Gen Cui and Xunhua Dai and Quan Quan},
-      year={2023},
-      eprint={2311.11340},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO}
+@article{le2023rflymad,
+  title={RflyMAD: A dataset for multicopter fault detection and health assessment},
+  author={Le, Xiangli and Jin, Bo and Cui, Gen and Dai, Xunhua and Quan, Quan},
+  journal={The International Journal of Robotics Research},
+  pages={02783649241305153},
+  year={2023},
+  publisher={SAGE Publications Sage UK: London, England}
 }
 ```
 ## 3. Downloads
